@@ -1,7 +1,6 @@
-package com.tortugolen.ostrea.Items;
+package com.tortugolen.ostrea.Items.PearlTips;
 
-import com.tortugolen.ostrea.Entities.PearlTipProjectileEntity;
-import com.tortugolen.ostrea.Init.InitEntities;
+import com.tortugolen.ostrea.Entities.PearlTips.IronPearlTipProjectileEntity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.stats.Stats;
@@ -12,8 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class PearlTipItem extends Item {
-    public PearlTipItem(Properties pProperties) {
+public class IronPearlTipItem extends Item {
+    public IronPearlTipItem(Properties pProperties) {
         super(pProperties);
 
     }
@@ -25,7 +24,7 @@ public class PearlTipItem extends Item {
         );
 
         if (pLevel instanceof ServerLevel serverLevel) {
-            PearlTipProjectileEntity pearlTipProjectile = new PearlTipProjectileEntity(pPlayer, pLevel);
+            IronPearlTipProjectileEntity pearlTipProjectile = new IronPearlTipProjectileEntity(pPlayer, pLevel);
             pearlTipProjectile.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 2F, 0F);
             pLevel.addFreshEntity(pearlTipProjectile);
         }

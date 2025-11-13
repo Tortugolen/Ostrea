@@ -1,6 +1,6 @@
 package com.tortugolen.ostrea.Init;
 
-import com.tortugolen.ostrea.Entities.PearlTipProjectileEntity;
+import com.tortugolen.ostrea.Entities.PearlTips.PearlTipProjectileEntity;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;

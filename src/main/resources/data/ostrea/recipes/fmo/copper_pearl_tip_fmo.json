@@ -1,0 +1,17 @@
+{
+  "type": "ostrea:extended_pearlization",
+  "ingredients": [
+    {
+      "item": "ostrea:copper_nugget"
+    },
+    {
+      "tag": "ostrea:mom/tip_mom"
+    },
+    {
+      "tag": "ostrea:mom/copper_mom"
+    }
+  ],
+  "result": {
+    "item": "ostrea:copper_pearl_tip"
+  }
+}

@@ -2,7 +2,7 @@
   "type": "ostrea:pearlization",
   "ingredients": [
     {
-      "tag": "forge:copper_nuggets"
+      "tag": "forge:nuggets/copper"
     }
   ],
   "result": {

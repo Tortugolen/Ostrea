@@ -1,6 +1,9 @@
 package com.tortugolen.ostrea.Init;
 
-import com.tortugolen.ostrea.Items.PearlTipItem;
+import com.tortugolen.ostrea.Items.PearlTips.CopperPearlTipItem;
+import com.tortugolen.ostrea.Items.PearlTips.GoldPearlTipItem;
+import com.tortugolen.ostrea.Items.PearlTips.IronPearlTipItem;
+import com.tortugolen.ostrea.Items.PearlTips.PearlTipItem;
 import com.tortugolen.ostrea.Items.TooltipItem;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.world.item.BlockItem;
@@ -19,6 +22,9 @@ public class InitItems {
     public static final RegistryObject<Item> GOLD_PEARL = ITEMS.register("gold_pearl", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CALCIUM_CARBONATE = ITEMS.register("calcium_carbonate", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PEARL_TIP = ITEMS.register("pearl_tip", () -> new PearlTipItem(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> IRON_PEARL_TIP = ITEMS.register("iron_pearl_tip", () -> new IronPearlTipItem(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> COPPER_PEARL_TIP = ITEMS.register("copper_pearl_tip", () -> new CopperPearlTipItem(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> GOLD_PEARL_TIP = ITEMS.register("gold_pearl_tip", () -> new GoldPearlTipItem(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> SHELLFISH_KNIFE = ITEMS.register("shellfish_knife", () -> new Item(new Item.Properties().durability(64)));
     public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> AMORPHOUS_PEARL = ITEMS.register("amorphous_pearl", () -> new Item(new Item.Properties()));

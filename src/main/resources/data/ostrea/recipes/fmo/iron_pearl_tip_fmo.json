@@ -1,0 +1,17 @@
+{
+  "type": "ostrea:extended_pearlization",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_nugget"
+    },
+    {
+      "tag": "ostrea:mom/tip_mom"
+    },
+    {
+      "tag": "ostrea:mom/iron_mom"
+    }
+  ],
+  "result": {
+    "item": "ostrea:iron_pearl_tip"
+  }
+}

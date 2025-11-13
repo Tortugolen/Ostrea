@@ -23,8 +23,11 @@ public class InitTabs {
                         pOutput.accept(InitItems.PEARL.get());
                         pOutput.accept(InitItems.PEARL_TIP.get());
                         pOutput.accept(InitItems.IRON_PEARL.get());
+                        pOutput.accept(InitItems.IRON_PEARL_TIP.get());
                         pOutput.accept(InitItems.COPPER_PEARL.get());
+                        pOutput.accept(InitItems.COPPER_PEARL_TIP.get());
                         pOutput.accept(InitItems.GOLD_PEARL.get());
+                        pOutput.accept(InitItems.GOLD_PEARL_TIP.get());
                         pOutput.accept(InitItems.OYSTER_ITEM.get());
                         pOutput.accept(InitItems.MECHANICAL_OYSTER_ITEM.get());
                         pOutput.accept(InitItems.SHELLFISH_KNIFE.get());

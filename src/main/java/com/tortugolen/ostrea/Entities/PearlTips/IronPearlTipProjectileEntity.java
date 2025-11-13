@@ -1,4 +1,4 @@
-package com.tortugolen.ostrea.Entities;
+package com.tortugolen.ostrea.Entities.PearlTips;
 
 import com.tortugolen.ostrea.Init.InitEntities;
 import com.tortugolen.ostrea.Init.InitItems;
@@ -20,20 +20,21 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 
-public class PearlTipProjectileEntity extends ThrowableItemProjectile {
-    float DAMAGE = 5F;
+public class IronPearlTipProjectileEntity extends ThrowableItemProjectile {
+    float DAMAGE = 6F;
+    float RECYCLE = 0.75F;
 
-    public PearlTipProjectileEntity(EntityType<? extends PearlTipProjectileEntity> type, Level level) {
+    public IronPearlTipProjectileEntity(EntityType<? extends IronPearlTipProjectileEntity> type, Level level) {
         super(type, level);
     }
 
-    public PearlTipProjectileEntity(LivingEntity shooter, Level level) {
+    public IronPearlTipProjectileEntity(LivingEntity shooter, Level level) {
         super(InitEntities.PEARL_TIP.get(), shooter, level);
     }
 
     @Override
     protected Item getDefaultItem() {
-        return InitItems.PEARL_TIP.get();
+        return InitItems.IRON_PEARL_TIP.get();
     }
 
     @Override
@@ -56,10 +57,8 @@ public class PearlTipProjectileEntity extends ThrowableItemProjectile {
         super.onHitBlock(result);
         if (this.level() instanceof ServerLevel pLevel) {
             BlockPos pPosition = result.getBlockPos();
-            if (this.random.nextFloat() < 0.5F) {
+            if (this.random.nextFloat() < RECYCLE) {
                 pLevel.addFreshEntity(new net.minecraft.world.entity.item.ItemEntity(pLevel, pPosition.getX() + 0.5F, pPosition.getY() + 1F, pPosition.getZ() + 0.5F, this.getItem()));
-            } else if (this.random.nextFloat() < 0.5F) {
-                pLevel.addFreshEntity(new net.minecraft.world.entity.item.ItemEntity(pLevel, pPosition.getX() + 0.5F, pPosition.getY() + 1F, pPosition.getZ() + 0.5F, new ItemStack(InitItems.NACRE.get())));
             } else {
                 pLevel.playSound(null, pPosition, InitSounds.PEARL_TTP_BREAK.get(), SoundSource.BLOCKS, 16F, 1F);
             }

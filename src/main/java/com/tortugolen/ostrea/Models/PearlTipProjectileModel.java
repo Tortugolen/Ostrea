@@ -2,7 +2,7 @@ package com.tortugolen.ostrea.Models;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.tortugolen.ostrea.Entities.PearlTipProjectileEntity;
+import com.tortugolen.ostrea.Entities.PearlTips.PearlTipProjectileEntity;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;

@@ -1,0 +1,11 @@
+{
+  "type": "ostrea:crush",
+  "ingredients": [
+    {
+      "tag": "ostrea:shells"
+    }
+  ],
+  "result": {
+    "item": "ostrea:calcium_carbonate"
+  }
+}

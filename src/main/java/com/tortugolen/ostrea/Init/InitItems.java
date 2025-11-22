@@ -4,6 +4,7 @@ import com.tortugolen.ostrea.Items.PearlTips.CopperPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.GoldPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.IronPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.PearlTipItem;
+import com.tortugolen.ostrea.Items.PurityTooltipItem;
 import com.tortugolen.ostrea.Items.TooltipItem;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.world.item.BlockItem;
@@ -20,7 +21,7 @@ public class InitItems {
     public static final RegistryObject<Item> IRON_PEARL = ITEMS.register("iron_pearl", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COPPER_PEARL = ITEMS.register("copper_pearl", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GOLD_PEARL = ITEMS.register("gold_pearl", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CALCIUM_CARBONATE = ITEMS.register("calcium_carbonate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CALCIUM_CARBONATE = ITEMS.register("calcium_carbonate", () -> new PurityTooltipItem(new Item.Properties(), "§e100§r"));
     public static final RegistryObject<Item> PEARL_TIP = ITEMS.register("pearl_tip", () -> new PearlTipItem(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> IRON_PEARL_TIP = ITEMS.register("iron_pearl_tip", () -> new IronPearlTipItem(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> COPPER_PEARL_TIP = ITEMS.register("copper_pearl_tip", () -> new CopperPearlTipItem(new Item.Properties().stacksTo(16)));
@@ -29,7 +30,8 @@ public class InitItems {
     public static final RegistryObject<Item> COPPER_NUGGET = ITEMS.register("copper_nugget", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> AMORPHOUS_PEARL = ITEMS.register("amorphous_pearl", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PARCHMENT = ITEMS.register("parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ARAGONITE_SHARD = ITEMS.register("aragonite_shard", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> IMPURITIES = ITEMS.register("impurities", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ARAGONITE_POWDER = ITEMS.register("aragonite_powder", () -> new PurityTooltipItem(new Item.Properties(), "§e50§r"));
 
     //MechanicalOysterModifiers
 
@@ -57,4 +59,7 @@ public class InitItems {
     public static final RegistryObject<Item> IRON_INSCRIBED_STONE_ITEM = ITEMS.register("iron_inscribed_stone", () -> new BlockItem(InitBlocks.IRON_INSCRIBED_STONE.get(), new Item.Properties()));
     public static final RegistryObject<Item> COPPER_INSCRIBED_STONE_ITEM = ITEMS.register("copper_inscribed_stone", () -> new BlockItem(InitBlocks.COPPER_INSCRIBED_STONE.get(), new Item.Properties()));
     public static final RegistryObject<Item> GOLD_INSCRIBED_STONE_ITEM = ITEMS.register("gold_inscribed_stone", () -> new BlockItem(InitBlocks.GOLD_INSCRIBED_STONE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CRUSHER_ITEM = ITEMS.register("crusher", () -> new BlockItem(InitBlocks.CRUSHER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARAGONITE_CLUSTER_ITEM = ITEMS.register("aragonite_cluster", () -> new BlockItem(InitBlocks.ARAGONITE_CLUSTER.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ARAGONITE_SHARD = ITEMS.register("aragonite_shard", () -> new BlockItem(InitBlocks.ARAGONITE_SHARD.get(), new Item.Properties()));
 }

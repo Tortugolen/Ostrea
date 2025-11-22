@@ -1,6 +1,7 @@
 package com.tortugolen.ostrea.Init;
 
 import com.tortugolen.ostrea.Ostrea;
+import com.tortugolen.ostrea.Recipes.CrushRecipes;
 import com.tortugolen.ostrea.Recipes.ExtendedPearlizationRecipes;
 import com.tortugolen.ostrea.Recipes.PearlizationRecipes;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -15,4 +16,6 @@ public class InitRecipes {
             "pearlization", () -> PearlizationRecipes.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<ExtendedPearlizationRecipes>> EXTENDED_PEARLIZATION = SERIALIZERS.register(
             "extended_pearlization", () -> ExtendedPearlizationRecipes.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<CrushRecipes>> CRUSH = SERIALIZERS.register(
+            "crush", () -> CrushRecipes.Serializer.INSTANCE);
 }

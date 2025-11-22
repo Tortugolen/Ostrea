@@ -17,6 +17,7 @@ public class InitTabs {
                     .icon(() -> new ItemStack(InitItems.PEARL.get()))
                     .displayItems((pParameters, pOutput) -> {
 
+                        pOutput.accept(InitItems.CRUSHER_ITEM.get());
                         pOutput.accept(InitItems.CALCIUM_CARBONATE.get());
                         pOutput.accept(InitItems.NACRE.get());
                         pOutput.accept(InitItems.AMORPHOUS_PEARL.get());
@@ -30,8 +31,14 @@ public class InitTabs {
                         pOutput.accept(InitItems.GOLD_PEARL_TIP.get());
                         pOutput.accept(InitItems.OYSTER_ITEM.get());
                         pOutput.accept(InitItems.MECHANICAL_OYSTER_ITEM.get());
+
+                        pOutput.accept(InitItems.ARAGONITE_CLUSTER_ITEM.get());
+                        pOutput.accept(InitItems.ARAGONITE_SHARD.get());
+                        pOutput.accept(InitItems.ARAGONITE_POWDER.get());
+
                         pOutput.accept(InitItems.SHELLFISH_KNIFE.get());
                         pOutput.accept(InitItems.COPPER_NUGGET.get());
+                        pOutput.accept(InitItems.IMPURITIES.get());
                         pOutput.accept(InitItems.PARCHMENT.get());
 
                         pOutput.accept(InitItems.ROUND_MOM.get());

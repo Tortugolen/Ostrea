@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "ostrea:block/crusher",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ostrea:block/crusher"
+    },
+    "facing=south": {
+      "model": "ostrea:block/crusher",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ostrea:block/crusher",
+      "y": 270
+    }
+  }
+}

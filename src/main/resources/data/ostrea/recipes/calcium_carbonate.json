@@ -1,8 +1,12 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:calcite"
-  },
-  "result": "ostrea:calcium_carbonate",
-  "count": 2
+  "type": "ostrea:crush",
+  "ingredients": [
+    {
+      "item": "minecraft:calcite"
+    }
+  ],
+  "result": {
+    "item": "ostrea:calcium_carbonate",
+    "count": 2
+  }
 }

@@ -20,7 +20,7 @@ public class PearlizationRecipes implements Recipe<SimpleContainer> {
     private final ItemStack result;
     private final ResourceLocation id;
 
-    public PearlizationRecipes(NonNullList<Ingredient> inputItems, NonNullList<Ingredient> essenceItems, ItemStack result, ResourceLocation id) {
+    public PearlizationRecipes(NonNullList<Ingredient> inputItems, ItemStack result, ResourceLocation id) {
         this.inputItems = inputItems;
         this.result = result;
         this.id = id;
@@ -90,7 +90,7 @@ public class PearlizationRecipes implements Recipe<SimpleContainer> {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new PearlizationRecipes(inputs, inputs, result, pRecipeId);
+            return new PearlizationRecipes(inputs, result, pRecipeId);
         }
 
         @Override
@@ -102,7 +102,7 @@ public class PearlizationRecipes implements Recipe<SimpleContainer> {
             }
 
             ItemStack result = pBuffer.readItem();
-            return new PearlizationRecipes(inputs, inputs, result, pRecipeId);
+            return new PearlizationRecipes(inputs, result, pRecipeId);
         }
 
         @Override

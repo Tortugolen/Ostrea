@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:aragonite_shard"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "ostrea:blocks/aragonite_shard"
+}

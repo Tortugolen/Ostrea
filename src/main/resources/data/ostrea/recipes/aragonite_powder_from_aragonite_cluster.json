@@ -1,0 +1,12 @@
+{
+  "type": "ostrea:crush",
+  "ingredients": [
+    {
+      "item": "ostrea:aragonite_cluster"
+    }
+  ],
+  "result": {
+    "item": "ostrea:aragonite_powder",
+    "count": 2
+  }
+}

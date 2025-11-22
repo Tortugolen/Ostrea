@@ -1,0 +1,11 @@
+{
+  "type": "ostrea:crush",
+  "ingredients": [
+    {
+      "item": "ostrea:aragonite_shard"
+    }
+  ],
+  "result": {
+    "item": "ostrea:aragonite_powder"
+  }
+}

@@ -15,6 +15,8 @@
   "item.ostrea.shellfish_knife": "Shellfish Knife",
   "item.ostrea.copper_nugget": "Copper Nugget",
   "item.ostrea.parchment": "Parchment",
+  "item.ostrea.aragonite_powder": "Aragonite Powder",
+  "item.ostrea.impurities": "Impurities",
 
   "item.ostrea.round_mom": "Mechanical Oyster Modifier",
   "item.ostrea.round_amom": "Ancient Mechanical Oyster Modifier",
@@ -30,14 +32,21 @@
   "item.ostrea.gold_amom": "Ancient Mechanical Oyster Modifier",
 
   "block.ostrea.oyster": "Oyster",
-
   "block.ostrea.mechanical_oyster": "Mechanical Oyster",
+  "block.ostrea.crusher": "Crusher",
+  "block.ostrea.aragonite_cluster": "Aragonite Cluster",
   "block.ostrea.round_inscribed_stone": "Inscribed Stone",
   "block.ostrea.tip_inscribed_stone": "Inscribed Stone",
   "block.ostrea.calcium_carbonate_inscribed_stone": "Inscribed Stone",
   "block.ostrea.iron_inscribed_stone": "Inscribed Stone",
   "block.ostrea.copper_inscribed_stone": "Inscribed Stone",
   "block.ostrea.gold_inscribed_stone": "Inscribed Stone",
+  "block.ostrea.aragonite_shard": "Aragonite Shard",
+
+  "recipe.ostrea.crush": "Crushing",
+  "recipe.ostrea.pearlization": "Pearling",
+
+  "tooltip.ostrea.purity": "§ePurity§r",
 
   "mom.tooltip.ostrea.round": "§eRound Form§r",
   "mom.tooltip.ostrea.tip": "§eTip Form§r",

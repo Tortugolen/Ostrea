@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "ostrea:block/aragonite_shard",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "ostrea:block/aragonite_shard",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ostrea:block/aragonite_shard",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "ostrea:block/aragonite_shard",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "ostrea:block/aragonite_shard"
+    },
+    "facing=west": {
+      "model": "ostrea:block/aragonite_shard",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

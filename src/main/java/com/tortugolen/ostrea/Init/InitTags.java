@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 public class InitTags {
     public static class Items {
         public static final TagKey<Item> COPPER_NUGGETS = tag("nuggets/copper");
+        public static final TagKey<Item> SHELLS = tag("shells");
 
         //MOM's
 

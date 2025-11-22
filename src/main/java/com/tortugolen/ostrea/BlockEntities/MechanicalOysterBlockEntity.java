@@ -9,6 +9,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.Position;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -36,9 +37,20 @@ import java.util.*;
 public class MechanicalOysterBlockEntity extends BlockEntity implements MenuProvider {
 
     private static final Map<Item, Integer> CALCIUM_CARBONATE_ITEMS = new HashMap<>();
+    private static final Map<Item, Integer> PURITY = new HashMap<>();
+    private static final Map<Item, Integer> IMPURITY_COUNT = new HashMap<>();
 
     static {
         CALCIUM_CARBONATE_ITEMS.put(InitItems.CALCIUM_CARBONATE.get(), 1);
+        CALCIUM_CARBONATE_ITEMS.put(InitItems.ARAGONITE_POWDER.get(), 1);
+    }
+    static {
+        PURITY.put(InitItems.CALCIUM_CARBONATE.get(), 100);
+        PURITY.put(InitItems.ARAGONITE_POWDER.get(), 50);
+    }
+    static {
+        IMPURITY_COUNT.put(InitItems.CALCIUM_CARBONATE.get(), 0);
+        IMPURITY_COUNT.put(InitItems.ARAGONITE_POWDER.get(), 1);
     }
 
     private static final Set<Item> MODIFIERS = new HashSet<>();
@@ -202,11 +214,23 @@ public class MechanicalOysterBlockEntity extends BlockEntity implements MenuProv
         ItemStack slotStack = itemHandler.getStackInSlot(CALCIUM_CARBONATE_SLOT);
         if (!CALCIUM_CARBONATE_ITEMS.containsKey(slotStack.getItem())) return;
 
-        int purity = CALCIUM_CARBONATE_ITEMS.get(slotStack.getItem());
-        if (amountCalciumCarbonate + purity <= maxAmountCalciumCarbonate) {
+        int amount = CALCIUM_CARBONATE_ITEMS.get(slotStack.getItem());
+        if (amountCalciumCarbonate + amount <= maxAmountCalciumCarbonate) {
             if (itemHandler.getStackInSlot(WASTE_SLOT).getCount() < 64) {
                 itemHandler.extractItem(CALCIUM_CARBONATE_SLOT, 1, false);
-                amountCalciumCarbonate += purity;
+
+                if (canInsertItemIntoWasteSlot(InitItems.IMPURITIES.get())) {
+                    float IMPURITIES = ((100 - PURITY.getOrDefault(slotStack.getItem(), 100)) / 100F);
+                    if (IMPURITIES != 0 && RandomSource.create().nextFloat() < IMPURITIES) {
+                        if (itemHandler.getStackInSlot(WASTE_SLOT).isEmpty()) {
+                            itemHandler.setStackInSlot(WASTE_SLOT, new ItemStack(InitItems.IMPURITIES.get(), IMPURITY_COUNT.get(slotStack.getItem())));
+                        } else if (itemHandler.getStackInSlot(WASTE_SLOT).getItem() == InitItems.IMPURITIES.get()) {
+                            itemHandler.getStackInSlot(WASTE_SLOT).grow(IMPURITY_COUNT.get(slotStack.getItem()));
+                            itemHandler.setStackInSlot(WASTE_SLOT, itemHandler.getStackInSlot(WASTE_SLOT));
+                        }
+                    }
+                }
+                amountCalciumCarbonate += amount;
                 setChanged();
             }
         }
@@ -291,6 +315,14 @@ public class MechanicalOysterBlockEntity extends BlockEntity implements MenuProv
 
     private boolean canInsertItemIntoOutputSlot(Item item) {
         ItemStack outputStack = itemHandler.getStackInSlot(RESULT_SLOT);
+        if (outputStack.isEmpty()) {
+            return true;
+        }
+        return outputStack.getItem() == item && outputStack.getCount() < outputStack.getMaxStackSize();
+    }
+
+    private boolean canInsertItemIntoWasteSlot(Item item) {
+        ItemStack outputStack = itemHandler.getStackInSlot(WASTE_SLOT);
         if (outputStack.isEmpty()) {
             return true;
         }

@@ -1,0 +1,12 @@
+{
+  "type": "ostrea:crush",
+  "ingredients": [
+    {
+      "item": "minecraft:tnt"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gunpowder",
+    "count": 3
+  }
+}

@@ -17,10 +17,21 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
+import java.util.List;
+
 public class ExtendedPearlizationJEI implements IRecipeCategory<ExtendedPearlizationRecipes> {
     public static final ResourceLocation UID = new ResourceLocation(Ostrea.MOD_ID, "extended_pearlization");
     public static final ResourceLocation TEXTURE = new ResourceLocation(Ostrea.MOD_ID, "textures/gui/jei/mechanical_oyster.png");
     public static final RecipeType<ExtendedPearlizationRecipes> EXTENDED_PEARLIZATION_TYPE = new RecipeType<>(UID, ExtendedPearlizationRecipes.class);
+
+    private static final List<ItemStack> FUELS = List.of(
+            new ItemStack(InitItems.CALCIUM_CARBONATE.get()),
+            new ItemStack(InitItems.ARAGONITE_POWDER.get())
+    );
+
+    private static final List<ItemStack> IMPURITIES = List.of(
+            new ItemStack(InitItems.IMPURITIES.get()));
+
     private final IDrawable background;
     private final IDrawable icon;
 
@@ -36,7 +47,7 @@ public class ExtendedPearlizationJEI implements IRecipeCategory<ExtendedPearliza
 
     @Override
     public Component getTitle() {
-        return Component.translatable("block.ostrea.mechanical_oyster");
+        return Component.translatable("recipe.ostrea.pearlization");
     }
 
     @Override
@@ -55,6 +66,8 @@ public class ExtendedPearlizationJEI implements IRecipeCategory<ExtendedPearliza
         builder.addSlot(RecipeIngredientRole.INPUT, 55, 1).addIngredients(recipe.getIngredients().get(1));
         builder.addSlot(RecipeIngredientRole.INPUT, 73, 1).addIngredients(recipe.getIngredients().get(2));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 118, 30).addItemStack(recipe.getResultItem(null));
+        builder.addSlot(RecipeIngredientRole.RENDER_ONLY, 64, 42).addItemStacks(FUELS);
+        builder.addSlot(RecipeIngredientRole.RENDER_ONLY, 118, 56).addItemStacks(IMPURITIES);
     }
 
     @Override

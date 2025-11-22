@@ -42,7 +42,11 @@ public class MechanicalOysterMenu extends AbstractContainerMenu {
                     return false;
                 }});
             this.addSlot(new SlotItemHandler(iItemHandler, 2, 80, 59 - SLOT_DISPLACEMENT));
-            this.addSlot(new SlotItemHandler(iItemHandler, 3, 134, 73 - SLOT_DISPLACEMENT));
+            this.addSlot(new SlotItemHandler(iItemHandler, 3, 134, 73 - SLOT_DISPLACEMENT) {
+                @Override
+                public boolean mayPlace(ItemStack stack) {
+                    return false;
+                }});
             this.addSlot(new SlotItemHandler(iItemHandler, 4, 71, 18 - SLOT_DISPLACEMENT));
             this.addSlot(new SlotItemHandler(iItemHandler, 5, 89, 18 - SLOT_DISPLACEMENT));
         });

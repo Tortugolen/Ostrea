@@ -13,6 +13,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.WorldGenLevel;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -38,7 +39,7 @@ public class OysterFeature extends Feature<RandomPatchConfiguration> {
         RandomSource pRandom = pContext.random();
 
         int seaLevel = pLevel.getSeaLevel();
-        int oysterCount = MIN_OYSTERS_PER_PATCH + pRandom.nextInt(MAX_OYSTERS_PER_PATCH);
+        int oysterCount = MIN_OYSTERS_PER_PATCH + pRandom.nextInt(MAX_OYSTERS_PER_PATCH - MIN_OYSTERS_PER_PATCH);
         int oysterPlaced = 0;
 
         for (int i = 0; i < oysterCount * 10; i++) {
@@ -56,16 +57,21 @@ public class OysterFeature extends Feature<RandomPatchConfiguration> {
                     pLevel.setBlock(pPosition, oysterState, 3);
 
                     if (pLevel.getBlockEntity(pPosition) instanceof OysterBlockEntity oysterBlockEntity) {
+                        oysterBlockEntity.onLoad();
+
                         boolean j = pRandom.nextBoolean();
-                        boolean k = pRandom.nextBoolean();
-                        boolean l = pRandom.nextBoolean();
+                        boolean k = !j && pRandom.nextBoolean();
+                        boolean l = !j && !k && pRandom.nextBoolean();
+
                         if (j) {
-                            oysterBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> handler.insertItem(0, new ItemStack(InitItems.PEARL.get()),false));
+                            oysterBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> handler.insertItem(0, new ItemStack(InitItems.PEARL.get()), false));
                         } else if (k) {
-                            oysterBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> handler.insertItem(0, new ItemStack(InitItems.NACRE.get()),false));
+                            oysterBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> handler.insertItem(0, new ItemStack(InitItems.NACRE.get()), false));
                         } else if (l) {
-                            oysterBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> handler.insertItem(0, new ItemStack(Items.SAND),false));
+                            oysterBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> handler.insertItem(0, new ItemStack(Items.SAND), false));
                         }
+
+                        oysterBlockEntity.setChanged();
                     }
                     oysterPlaced++;
                 }

@@ -55,9 +55,11 @@ public class MechanicalOysterScreen extends AbstractContainerScreen<MechanicalOy
             guiGraphics.blit(TEXTURE, x + 61, y + 47, 176, 0, menu.getScaledProgress(), 15);
         }
     }
+
     public void renderCalciumCarbonateBar(GuiGraphics guiGraphics, int x, int y) {
         guiGraphics.blit(TEXTURE, x + 62, y + 84, 176, 16, menu.getScaledAmountCalciumCarbonate(), 4);
     }
+
     public void renderCalciumCarbonateCycle(GuiGraphics guiGraphics, int x, int y) {
         guiGraphics.blit(TEXTURE, x + 17, y + 38, 0, 183, 34, menu.getScaledCyclesCalciumCarbonate());
     }

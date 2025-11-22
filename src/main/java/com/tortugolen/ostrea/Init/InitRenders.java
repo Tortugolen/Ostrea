@@ -1,5 +1,6 @@
 package com.tortugolen.ostrea.Init;
 
+import com.tortugolen.ostrea.GUIs.Screens.CrusherScreen;
 import com.tortugolen.ostrea.GUIs.Screens.MechanicalOysterScreen;
 import com.tortugolen.ostrea.GUIs.Screens.OysterScreen;
 import com.tortugolen.ostrea.Models.PearlTipProjectileModel;
@@ -22,6 +23,7 @@ public class InitRenders {
     public static void onClientSetup(FMLClientSetupEvent event) {
         MenuScreens.register(InitMenus.OYSTER_MENU.get(), OysterScreen::new);
         MenuScreens.register(InitMenus.MECHANICAL_OYSTER_MENU.get(), MechanicalOysterScreen::new);
+        MenuScreens.register(InitMenus.CRUSHER_MENU.get(), CrusherScreen::new);
     }
 
     @SubscribeEvent

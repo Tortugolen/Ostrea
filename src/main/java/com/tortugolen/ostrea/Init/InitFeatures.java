@@ -1,5 +1,6 @@
 package com.tortugolen.ostrea.Init;
 
+import com.tortugolen.ostrea.Features.AragoniteFeature;
 import com.tortugolen.ostrea.Features.OysterFeature;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -13,4 +14,8 @@ public class InitFeatures {
 
     public static final RegistryObject<Feature<RandomPatchConfiguration>> OYSTER = FEATURES.register(
             "oyster", () -> new OysterFeature(RandomPatchConfiguration.CODEC));
+
+    public static final RegistryObject<Feature<RandomPatchConfiguration>> ARAGONITE = FEATURES.register(
+            "aragonite", () -> new AragoniteFeature(RandomPatchConfiguration.CODEC));
+
 }

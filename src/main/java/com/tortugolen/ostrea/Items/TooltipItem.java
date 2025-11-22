@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class TooltipItem extends Item {
-    private final String tooltip;
+    public final String tooltip;
 
     public TooltipItem(Properties pProperties, String tooltip) {
         super(pProperties);

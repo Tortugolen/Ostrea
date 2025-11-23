@@ -29,7 +29,7 @@ public class CopperPearlTipProjectileEntity extends ThrowableItemProjectile {
     }
 
     public CopperPearlTipProjectileEntity(LivingEntity shooter, Level level) {
-        super(InitEntities.PEARL_TIP.get(), shooter, level);
+        super(InitEntities.COPPER_PEARL_TIP.get(), shooter, level);
     }
 
     @Override

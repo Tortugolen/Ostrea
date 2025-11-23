@@ -1,4 +1,4 @@
-package com.tortugolen.ostrea.Models;
+package com.tortugolen.ostrea.Models.PearlTips;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;

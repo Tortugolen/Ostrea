@@ -29,7 +29,7 @@ public class GoldPearlTipProjectileEntity extends ThrowableItemProjectile {
     }
 
     public GoldPearlTipProjectileEntity(LivingEntity shooter, Level level) {
-        super(InitEntities.PEARL_TIP.get(), shooter, level);
+        super(InitEntities.GOLD_PEARL_TIP.get(), shooter, level);
     }
 
     @Override

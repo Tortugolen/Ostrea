@@ -1,0 +1,25 @@
+{
+  "type": "ostrea:abstract_cult",
+  "size": 5,
+  "cult": "abstract",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "item": "ostrea:pearl"
+    },
+    {
+      "item": "ostrea:round_mom"
+    },
+    {
+      "item": "ostrea:oyster"
+    },
+    {
+      "item": "ostrea:nacre"
+    }
+  ],
+  "result": {
+    "item": "ostrea:round_amom"
+  }
+}

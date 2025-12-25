@@ -1,0 +1,44 @@
+{
+  "parent": "ostrea:root",
+  "criteria": {
+    "nacreous_resin": {
+      "item": {
+        "items": [
+          "ostrea:nacreous_resin"
+        ]
+      },
+      "block": {
+        "blocks": [
+          "minecraft:cracked_stone_bricks",
+          "minecraft:cracked_deepslate_bricks",
+          "minecraft:cracked_deepslate_tiles",
+          "minecraft:cracked_nether_bricks",
+          "minecraft:cracked_polished_blackstone_bricks"
+        ]
+      },
+      "trigger": "ostrea:item_used_on_block"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.cracks_out.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:nacreous_resin"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.cracks_out.title"
+    }
+  },
+  "requirements": [
+    [
+      "nacreous_resin"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

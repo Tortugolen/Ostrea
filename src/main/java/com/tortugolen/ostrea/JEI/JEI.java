@@ -1,6 +1,7 @@
 package com.tortugolen.ostrea.JEI;
 
 import com.tortugolen.ostrea.Ostrea;
+import com.tortugolen.ostrea.Recipes.AbstractCultRecipes;
 import com.tortugolen.ostrea.Recipes.CrushRecipes;
 import com.tortugolen.ostrea.Recipes.ExtendedPearlizationRecipes;
 import com.tortugolen.ostrea.Recipes.PearlizationRecipes;
@@ -27,6 +28,10 @@ public class JEI implements IModPlugin {
         registration.addRecipeCategories(new PearlizationJEI(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new ExtendedPearlizationJEI(registration.getJeiHelpers().getGuiHelper()));
         registration.addRecipeCategories(new CrushJEI(registration.getJeiHelpers().getGuiHelper()));
+
+        //Cults
+
+        registration.addRecipeCategories(new AbstractCultJEI(registration.getJeiHelpers().getGuiHelper()));
     }
 
     @Override
@@ -42,5 +47,11 @@ public class JEI implements IModPlugin {
         registration.addRecipes(PearlizationJEI.PEARLIZATION_TYPE, pearlizationRecipes);
         registration.addRecipes(ExtendedPearlizationJEI.EXTENDED_PEARLIZATION_TYPE, extendedPearlizationRecipes);
         registration.addRecipes(CrushJEI.CRUSH_TYPE, crushRecipes);
+
+        //Cults
+
+        List<AbstractCultRecipes> abstractCultRecipes = recipeManager.getAllRecipesFor(AbstractCultRecipes.Type.INSTANCE);
+
+        registration.addRecipes(AbstractCultJEI.ABSTRACT_CULT_TYPE, abstractCultRecipes);
     }
 }

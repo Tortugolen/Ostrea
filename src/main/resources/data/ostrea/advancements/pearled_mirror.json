@@ -1,0 +1,30 @@
+{
+  "parent": "ostrea:pearl_jewel",
+  "criteria": {
+    "condition": {
+      "trigger": "ostrea:abstract"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.pearled_mirror.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:pearled_mirror"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.pearled_mirror.title"
+    }
+  },
+  "requirements": [
+    [
+      "condition"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

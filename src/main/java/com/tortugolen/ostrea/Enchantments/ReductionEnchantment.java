@@ -17,6 +17,11 @@ public class ReductionEnchantment extends Enchantment {
     }
 
     @Override
+    public boolean canApplyAtEnchantingTable(ItemStack pStack) {
+        return true;
+    }
+
+    @Override
     public int getMaxLevel() {
         return 3;
     }

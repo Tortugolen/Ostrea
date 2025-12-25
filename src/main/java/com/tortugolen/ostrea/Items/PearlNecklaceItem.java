@@ -1,11 +1,9 @@
 package com.tortugolen.ostrea.Items;
 
 import com.tortugolen.ostrea.Init.InitEnchantments;
+import com.tortugolen.ostrea.Init.InitMobEffects;
 import com.tortugolen.ostrea.Init.InitSounds;
-import com.tortugolen.ostrea.Init.InitTriggers;
-import com.tortugolen.ostrea.Triggers.EffectRemovedTrigger;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
@@ -19,14 +17,10 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvents;
 
-import java.util.ArrayList;
 import java.util.Map;
 
 public class PearlNecklaceItem extends Item {
-    private int STORED_EFFECTS = 0;
-
     private int PARTICLE_NUMBER = 50;
     private int HORIZONTAL_DISPERSION = 2;
     private double VERTICAL_DISPERSION = 0.3;
@@ -74,18 +68,20 @@ public class PearlNecklaceItem extends Item {
         var activeEffectsList = pPlayer.getActiveEffects().stream().toList();
         if (activeEffectsList.isEmpty()) return InteractionResultHolder.fail(pStack);
 
-        var harmfulEffectsList = activeEffectsList.stream().filter(e -> !e.getEffect().isBeneficial()).toList();
+        var harmfulEffectsList = activeEffectsList.stream()
+                .filter(e -> !e.getEffect().isBeneficial())
+                .filter(e -> e.getEffect() != InitMobEffects.PEARLIFICATION.get())
+                .toList();
 
         Map<Enchantment, Integer> enchantments = pStack.getAllEnchantments();
-
         boolean hasSelectiveBlessing = enchantments.containsKey(InitEnchantments.SELECTIVE_BLESSING.get());
-        boolean hasReduction = enchantments.containsKey(InitEnchantments.REDUCTION.get());
-        boolean hasPassiveAnnulment = enchantments.containsKey(InitEnchantments.PASSIVE_ANNULMENT.get());
 
         MobEffectInstance selectedEffectInstance;
 
         if (hasSelectiveBlessing) {
-            if (harmfulEffectsList.isEmpty()) return InteractionResultHolder.fail(pStack);
+            if (harmfulEffectsList.isEmpty()) {
+                return InteractionResultHolder.fail(pStack);
+            }
             selectedEffectInstance = harmfulEffectsList.get(pLevel.random.nextInt(harmfulEffectsList.size()));
         } else {
             selectedEffectInstance = activeEffectsList.get(pLevel.random.nextInt(activeEffectsList.size()));
@@ -96,23 +92,9 @@ public class PearlNecklaceItem extends Item {
         int amplifier = selectedEffectInstance.getAmplifier();
         int color = effect.getColor();
 
-        int itemDamageWithoutAmplifier = 20 * (getUnbreakingLevel(pStack) + 1);
-
-        var remaining = new ArrayList<MobEffectInstance>();
         boolean removed = false;
 
-        for (MobEffectInstance inst : activeEffectsList) {
-            if (!removed && inst.getEffect() == effect && inst.getDuration() == duration && inst.getAmplifier() == amplifier) {
-                removed = true;
-                continue;
-            }
-            remaining.add(inst);
-        }
-
-        pPlayer.removeAllEffects();
-        for (MobEffectInstance inst : remaining) {
-            pPlayer.addEffect(new MobEffectInstance(inst));
-        }
+        removed = pPlayer.removeEffect(effect);
 
         if (!removed) return InteractionResultHolder.fail(pStack);
 
@@ -128,27 +110,6 @@ public class PearlNecklaceItem extends Item {
             double oz = (pLevel.random.nextDouble() - 0.5) * HORIZONTAL_DISPERSION;
 
             pLevel.addParticle(ParticleTypes.ENTITY_EFFECT, pPlayer.getX() + ox, pPlayer.getY() + INITIAL_POSITION + oy, pPlayer.getZ() + oz, r, g, b);
-        }
-
-        if (amplifier > 0) {
-            int reduction = hasReduction ? (getReductionLevel(pStack) + 1) : 1;
-            int newAmp = amplifier - reduction;
-            if (newAmp >= 0) {
-                pPlayer.addEffect(new MobEffectInstance(effect, duration, newAmp));
-            }
-        }
-
-        if (!pPlayer.isCreative()) {
-            if (amplifier == 0) {
-                pStack.hurtAndBreak(duration / itemDamageWithoutAmplifier, pPlayer, player -> player.broadcastBreakEvent(pUsedHand));
-            }
-            else {
-                pStack.hurtAndBreak(getItemDamageWithAmplifier(pStack), pPlayer, player -> player.broadcastBreakEvent(pUsedHand));
-            }
-        }
-
-        if (!pLevel.isClientSide && pPlayer instanceof ServerPlayer serverPlayer) {
-            InitTriggers.EFFECT_REMOVED.trigger(serverPlayer, pStack, effect);
         }
 
         return InteractionResultHolder.success(pStack);

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ostrea:nacre_altar"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "ostrea:blocks/nacre_altar"
+}

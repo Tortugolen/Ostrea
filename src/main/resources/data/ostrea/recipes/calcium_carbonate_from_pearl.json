@@ -1,0 +1,12 @@
+{
+  "type": "ostrea:crush",
+  "ingredients": [
+    {
+      "item": "ostrea:pearl"
+    }
+  ],
+  "result": {
+    "item": "ostrea:calcium_carbonate",
+    "count": 2
+  }
+}

@@ -6,6 +6,8 @@ import com.tortugolen.ostrea.Recipes.ExtendedPearlizationRecipes;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -35,10 +37,22 @@ public class ExtendedPearlizationJEI implements IRecipeCategory<ExtendedPearliza
 
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawable arrow;
+    private final IDrawableAnimated arrowAnimated;
+    private final IDrawable CaCO3Bar;
+    private final IDrawableAnimated CaCO3BarAnimated;
+    private final IDrawable CaCO3Cycles;
+    private final IDrawableAnimated CaCO3CyclesAnimated;
 
     public ExtendedPearlizationJEI(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 139, 73);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(InitItems.MECHANICAL_OYSTER_ITEM.get()));
+        this.arrow = helper.createDrawable(TEXTURE, 139, 0, 59, 16);
+        this.arrowAnimated = helper.createAnimatedDrawable((IDrawableStatic) arrow, 640, IDrawableAnimated.StartDirection.LEFT, false);
+        this.CaCO3Bar = helper.createDrawable(TEXTURE, 139, 16, 52, 4);
+        this.CaCO3BarAnimated = helper.createAnimatedDrawable((IDrawableStatic) CaCO3Bar, 320, IDrawableAnimated.StartDirection.LEFT, true);
+        this.CaCO3Cycles = helper.createDrawable(TEXTURE, 139, 36, 34, 34);
+        this.CaCO3CyclesAnimated = helper.createAnimatedDrawable((IDrawableStatic) CaCO3Cycles, 160, IDrawableAnimated.StartDirection.TOP, true);
     }
 
     @Override
@@ -74,8 +88,10 @@ public class ExtendedPearlizationJEI implements IRecipeCategory<ExtendedPearliza
 
     @Override
     public void draw(ExtendedPearlizationRecipes recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
-        //guiGraphics.blit(TEXTURE, 45, 30, 139,0,);
-        //guiGraphics.blit(TEXTURE, 55, 19, 139, 20, 16, 16);
-        //guiGraphics.blit(TEXTURE, 73, 19, 139, 20, 16, 16);
+        arrowAnimated.draw(guiGraphics, 45, 30);
+        CaCO3Bar.draw(guiGraphics, 46, 67);
+        CaCO3CyclesAnimated.draw(guiGraphics, 1, 21);
+        guiGraphics.blit(TEXTURE, 55, 19, 139, 20, 16, 16);
+        guiGraphics.blit(TEXTURE, 73, 19, 139, 20, 16, 16);
     }
 }

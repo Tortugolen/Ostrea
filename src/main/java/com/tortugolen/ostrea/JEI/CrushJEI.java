@@ -6,6 +6,8 @@ import com.tortugolen.ostrea.Recipes.CrushRecipes;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.drawable.IDrawableAnimated;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -24,10 +26,14 @@ public class CrushJEI implements IRecipeCategory<CrushRecipes> {
     public static final RecipeType<CrushRecipes> CRUSH_TYPE = new RecipeType<>(UID, CrushRecipes.class);
     private final IDrawable background;
     private final IDrawable icon;
+    private final IDrawable arrow;
+    private final IDrawableAnimated arrowAnimated;
 
     public CrushJEI(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 82, 26);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(InitItems.CRUSHER_ITEM.get()));
+        this.arrow = helper.createDrawable(TEXTURE, 82, 0, 22, 16);
+        this.arrowAnimated = helper.createAnimatedDrawable((IDrawableStatic) arrow, 200, IDrawableAnimated.StartDirection.LEFT, false);
     }
 
     @Override
@@ -59,5 +65,6 @@ public class CrushJEI implements IRecipeCategory<CrushRecipes> {
 
     @Override
     public void draw(CrushRecipes recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+        arrowAnimated.draw(guiGraphics, 25, 5);
     }
 }

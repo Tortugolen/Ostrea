@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "ostrea:nacre_block"
+    },
+    "I": {
+      "item": "ostrea:nacre_slab"
+    }
+  },
+  "pattern": [
+    "III",
+    " # ",
+    "###"
+  ],
+  "result": {
+    "item": "ostrea:nacre_altar"
+  }
+}

@@ -18,6 +18,9 @@
   "item.ostrea.aragonite_powder": "Aragonite Powder",
   "item.ostrea.impurities": "Impurities",
   "item.ostrea.pearl_necklace": "Pearl Necklace",
+  "item.ostrea.pearl_ring": "Pearl Ring",
+  "item.ostrea.pearled_mirror": "Pearled Mirror",
+  "item.ostrea.nacreous_resin": "Nacreous Resin",
 
   "item.ostrea.round_mom": "Mechanical Oyster Modifier",
   "item.ostrea.round_amom": "Ancient Mechanical Oyster Modifier",
@@ -40,6 +43,8 @@
   "block.ostrea.nacre_stairs": "Nacre Stairs",
   "block.ostrea.nacre_bricks": "Nacre Bricks",
   "block.ostrea.smooth_nacre_block": "Smooth Nacre Block",
+  "block.ostrea.nacre_altar": "Nacre Altar",
+  "block.ostrea.deepslate_altar": "Deepslate Altar",
   "block.ostrea.aragonite_cluster": "Aragonite Cluster",
   "block.ostrea.aragonite_shard": "Aragonite Shard",
   "block.ostrea.round_inscribed_stone": "Inscribed Stone",
@@ -49,10 +54,17 @@
   "block.ostrea.copper_inscribed_stone": "Inscribed Stone",
   "block.ostrea.gold_inscribed_stone": "Inscribed Stone",
 
+  "entity.ostrea.pearl_tip": "Pearl Tip",
+  "entity.ostrea.iron_pearl_tip": "Iron Pearl Tip",
+  "entity.ostrea.copper_pearl_tip": "Copper Pearl Tip",
+  "entity.ostrea.gold_pearl_tip": "Gold Pearl Tip",
+
   "enchantment.ostrea.shell_opener": "Shell Opener",
   "enchantment.ostrea.selective_blessing": "Selective Blessing",
   "enchantment.ostrea.reduction": "Reduction",
   "enchantment.ostrea.passive_annulment": "Passive Annulment",
+
+  "effect.ostrea.pearlification": "Pearlification",
 
   "advancements.ostrea.root.title": "Ostrea",
   "advancements.ostrea.root.description": "Obtain an oyster",
@@ -62,13 +74,20 @@
   "advancements.ostrea.metal_pearls.description": "Obtain any metal pearl",
   "advancements.ostrea.pearl_jewel.title": "What a curious jewel",
   "advancements.ostrea.pearl_jewel.description": "Obtain a pearl jewel",
-  "advancements.ostrea.pearl_necklace.title": "Get rid of evil spirits",
+  "advancements.ostrea.pearl_necklace.title": "Eliminated",
   "advancements.ostrea.pearl_necklace.description": "Use the pearl necklace to eliminate an effect",
+  "advancements.ostrea.pearl_ring.title": "Blocked",
+  "advancements.ostrea.pearl_ring.description": "Use the pearl ring to obtain pearlification",
+  "advancements.ostrea.pearled_mirror.title": "Inverted",
+  "advancements.ostrea.pearled_mirror.description": "Use the pearled mirror to invert an effect",
   "advancements.ostrea.wasting_enchantments.title": "Wasting Enchantments",
   "advancements.ostrea.wasting_enchantments.description": "Enchant a shellfish knife with shell opener enchantment",
+  "advancements.ostrea.cracks_out.title": "Cracks Out",
+  "advancements.ostrea.cracks_out.description": "Apply Nacreous Resin to a Cracked block!",
 
   "recipe.ostrea.crush": "Crushing",
   "recipe.ostrea.pearlization": "Pearling",
+  "recipe.ostrea.abstract_cult": "Cult",
 
   "tooltip.ostrea.purity": "§ePurity§r",
 

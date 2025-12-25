@@ -1,8 +1,6 @@
 package com.tortugolen.ostrea.Init;
 
-import com.tortugolen.ostrea.BlockEntities.CrusherBlockEntity;
-import com.tortugolen.ostrea.BlockEntities.MechanicalOysterBlockEntity;
-import com.tortugolen.ostrea.BlockEntities.OysterBlockEntity;
+import com.tortugolen.ostrea.BlockEntities.*;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,5 +16,9 @@ public class InitBlockEntities {
             "mechanical_oyster_be", () -> BlockEntityType.Builder.of(MechanicalOysterBlockEntity::new, InitBlocks.MECHANICAL_OYSTER.get()).build(null));
     public static final RegistryObject<BlockEntityType<CrusherBlockEntity>> CRUSHER_BE = BLOCK_ENTITIES.register(
             "crusher_be", () -> BlockEntityType.Builder.of(CrusherBlockEntity::new, InitBlocks.CRUSHER.get()).build(null));
+    public static final RegistryObject<BlockEntityType<NacreAltarBlockEntity>> NACRE_ALTAR_BE = BLOCK_ENTITIES.register(
+            "nacre_altar_be", () -> BlockEntityType.Builder.of(NacreAltarBlockEntity::new, InitBlocks.NACRE_ALTAR.get()).build(null));
+    public static final RegistryObject<BlockEntityType<DeepslateAltarBlockEntity>> DEEPSLATE_ALTAR_BE = BLOCK_ENTITIES.register(
+            "deepslate_altar_be", () -> BlockEntityType.Builder.of(DeepslateAltarBlockEntity::new, InitBlocks.DEEPSLATE_ALTAR.get()).build(null));
 
 }

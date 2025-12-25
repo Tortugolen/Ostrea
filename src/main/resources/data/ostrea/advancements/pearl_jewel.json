@@ -12,6 +12,30 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "pearl_ring": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:pearl_ring"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pearled_mirror": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:pearled_mirror"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -23,7 +47,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "ostrea:pearl_necklace"
+      "item": "ostrea:pearl_ring"
     },
     "show_toast": true,
     "title": {
@@ -32,7 +56,9 @@
   },
   "requirements": [
     [
-      "pearl_necklace"
+      "pearl_necklace",
+      "pearl_ring",
+      "pearled_mirror"
     ]
   ],
   "sends_telemetry_event": true

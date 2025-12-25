@@ -195,13 +195,4 @@ public class CrusherBlockEntity extends BlockEntity implements MenuProvider {
     private void increaseCraftingProgress() {
         progress++;
     }
-
-    public int getProgress() {
-        return progress;
-    }
-
-    public void setProgress(int progress) {
-        this.progress = progress;
-        setChanged();
-    }
 }

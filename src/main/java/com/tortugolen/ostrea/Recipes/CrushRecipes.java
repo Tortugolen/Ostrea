@@ -28,7 +28,7 @@ public class CrushRecipes implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
-        if(pLevel.isClientSide()) {
+        if (pLevel.isClientSide()) {
             return false;
         }
 
@@ -67,7 +67,7 @@ public class CrushRecipes implements Recipe<SimpleContainer> {
 
     @Override
     public RecipeType<?> getType() {
-        return CrushRecipes.Type.INSTANCE;
+        return Type.INSTANCE;
     }
 
     public static class Type implements RecipeType<CrushRecipes> {

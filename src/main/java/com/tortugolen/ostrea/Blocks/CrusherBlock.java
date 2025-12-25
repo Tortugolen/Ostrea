@@ -1,6 +1,7 @@
 package com.tortugolen.ostrea.Blocks;
 
 import com.tortugolen.ostrea.BlockEntities.CrusherBlockEntity;
+import com.tortugolen.ostrea.BlockEntities.MechanicalOysterBlockEntity;
 import com.tortugolen.ostrea.Init.InitBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -88,6 +89,18 @@ public class CrusherBlock extends BaseEntityBlock {
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new CrusherBlockEntity(pPos, pState);
+    }
+
+    @Override
+    public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
+        if (pState.getBlock() != pNewState.getBlock()) {
+            BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
+            if (blockEntity instanceof CrusherBlockEntity) {
+                ((CrusherBlockEntity) blockEntity).drops();
+            }
+        }
+
+        super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
     }
 
     @Nullable

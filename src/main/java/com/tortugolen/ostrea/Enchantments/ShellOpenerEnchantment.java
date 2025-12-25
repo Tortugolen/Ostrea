@@ -7,8 +7,6 @@ import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
-import java.util.Set;
-
 public class ShellOpenerEnchantment extends Enchantment {
     public ShellOpenerEnchantment(Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot... pEquipmentSlots) {
         super(pRarity, pCategory, pEquipmentSlots);

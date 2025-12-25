@@ -1,0 +1,25 @@
+{
+  "type": "ostrea:abstract_cult",
+  "size": 5,
+  "cult": "abstract",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "item": "ostrea:pearl"
+    },
+    {
+      "item": "ostrea:calcium_carbonate_mom"
+    },
+    {
+      "item": "ostrea:oyster"
+    },
+    {
+      "tag": "ostrea:calcium_carbonate"
+    }
+  ],
+  "result": {
+    "item": "ostrea:calcium_carbonate_amom"
+  }
+}

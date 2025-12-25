@@ -7,19 +7,25 @@ import com.tortugolen.ostrea.Models.PearlTips.CopperPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.GoldPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.IronPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.PearlTipProjectileModel;
-import com.tortugolen.ostrea.Renderers.BlockRenderers;
+import com.tortugolen.ostrea.Ostrea;
+import com.tortugolen.ostrea.Renderers.DeepslateAltarRenderer;
+import com.tortugolen.ostrea.Renderers.NacreAltarRenderer;
 import com.tortugolen.ostrea.Renderers.PearlTips.CopperPearlTipProjectileRenderer;
 import com.tortugolen.ostrea.Renderers.PearlTips.GoldPearlTipProjectileRenderer;
 import com.tortugolen.ostrea.Renderers.PearlTips.IronPearlTipProjectileRenderer;
 import com.tortugolen.ostrea.Renderers.PearlTips.PearlTipProjectileRenderer;
+import net.minecraft.client.RecipeBookCategories;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-@Mod.EventBusSubscriber(modid = "ostrea", bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = Ostrea.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class InitRenders {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
@@ -27,11 +33,17 @@ public class InitRenders {
         event.registerEntityRenderer(InitEntities.IRON_PEARL_TIP.get(), IronPearlTipProjectileRenderer::new);
         event.registerEntityRenderer(InitEntities.COPPER_PEARL_TIP.get(), CopperPearlTipProjectileRenderer::new);
         event.registerEntityRenderer(InitEntities.GOLD_PEARL_TIP.get(), GoldPearlTipProjectileRenderer::new);
+
+        event.registerBlockEntityRenderer(InitBlockEntities.NACRE_ALTAR_BE.get(), NacreAltarRenderer::new);
+        event.registerBlockEntityRenderer(InitBlockEntities.DEEPSLATE_ALTAR_BE.get(), DeepslateAltarRenderer::new);
     }
 
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
-        event.enqueueWork(BlockRenderers::registerBlockRenderLayers);
+        ItemBlockRenderTypes.setRenderLayer(InitBlocks.ARAGONITE_SHARD.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(InitBlocks.ARAGONITE_CLUSTER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(InitBlocks.CRUSHER.get(), RenderType.cutout());
+
         MenuScreens.register(InitMenus.OYSTER_MENU.get(), OysterScreen::new);
         MenuScreens.register(InitMenus.MECHANICAL_OYSTER_MENU.get(), MechanicalOysterScreen::new);
         MenuScreens.register(InitMenus.CRUSHER_MENU.get(), CrusherScreen::new);

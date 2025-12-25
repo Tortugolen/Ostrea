@@ -20,7 +20,9 @@ public class Ostrea {
         InitBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         InitMenus.MENUS.register(modEventBus);
         InitRecipes.SERIALIZERS.register(modEventBus);
+        InitRecipeTypes.RECIPE_TYPES.register(modEventBus);
         InitEnchantments.ENCHANTMENTS.register(modEventBus);
+        InitMobEffects.MOB_EFFECTS.register(modEventBus);
         InitFeatures.FEATURES.register(modEventBus);
         InitTriggers.register();
     }

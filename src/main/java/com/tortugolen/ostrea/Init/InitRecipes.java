@@ -1,6 +1,7 @@
 package com.tortugolen.ostrea.Init;
 
 import com.tortugolen.ostrea.Ostrea;
+import com.tortugolen.ostrea.Recipes.AbstractCultRecipes;
 import com.tortugolen.ostrea.Recipes.CrushRecipes;
 import com.tortugolen.ostrea.Recipes.ExtendedPearlizationRecipes;
 import com.tortugolen.ostrea.Recipes.PearlizationRecipes;
@@ -18,4 +19,10 @@ public class InitRecipes {
             "extended_pearlization", () -> ExtendedPearlizationRecipes.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<CrushRecipes>> CRUSH = SERIALIZERS.register(
             "crush", () -> CrushRecipes.Serializer.INSTANCE);
+
+    //Cults
+
+    public static final RegistryObject<RecipeSerializer<AbstractCultRecipes>> ABSTRACT_CULT = SERIALIZERS.register(
+            "abstract_cult", () -> AbstractCultRecipes.Serializer.INSTANCE);
+
 }

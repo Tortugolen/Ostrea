@@ -46,8 +46,8 @@ public class InitBlocks {
                     .strength(1.5F)
                     .pushReaction(PushReaction.DESTROY)
                     .lightLevel((plightLevel) -> {
-                return 5;
-            })));
+                        return 5;
+                    })));
     public static final RegistryObject<Block> ARAGONITE_SHARD = BLOCKS.register("aragonite_shard",
             () -> new AragoniteShardBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_ORANGE)
@@ -58,8 +58,12 @@ public class InitBlocks {
                     .sound(SoundType.AMETHYST_CLUSTER)
                     .pushReaction(PushReaction.DESTROY)
                     .lightLevel((plightLevel) -> {
-                return 1;
-            })));
+                        return 1;
+                    })));
+    public static final RegistryObject<Block> NACRE_ALTAR = BLOCKS.register("nacre_altar",
+            () -> new NacreAltarBlock(BlockBehaviour.Properties.copy(InitBlocks.NACRE_BLOCK.get()).noOcclusion()));
+    public static final RegistryObject<Block> DEEPSLATE_ALTAR = BLOCKS.register("deepslate_altar",
+            () -> new DeepslateAltarBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_DEEPSLATE).noOcclusion()));
 
     //Inscribed Stones
 

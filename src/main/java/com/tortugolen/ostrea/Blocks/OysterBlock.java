@@ -67,7 +67,6 @@ public class OysterBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
         };
     }
 
-
     @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
@@ -140,6 +139,9 @@ public class OysterBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
     @Override
     public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
         ItemStack itemStack = pPlayer.getItemInHand(pHand);
+
+        boolean open = false;
+
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if (entity instanceof OysterBlockEntity) {
@@ -149,17 +151,24 @@ public class OysterBlock extends BaseEntityBlock implements SimpleWaterloggedBlo
                     }
                     NetworkHooks.openScreen(((ServerPlayer)pPlayer), (OysterBlockEntity)entity, pPos);
                     pLevel.playSound(null, pPos, SoundEvents.DECORATED_POT_PLACE, SoundSource.BLOCKS, 1F, 1F);
+                    open = true;
                 } else if (EnchantmentHelper.getItemEnchantmentLevel(InitEnchantments.SHELL_OPENER.get(), itemStack) > 0) {
                     if (!pPlayer.isCreative()) {
                         itemStack.hurtAndBreak(1, pPlayer, player -> player.broadcastBreakEvent(pHand));
                     }
                     NetworkHooks.openScreen(((ServerPlayer)pPlayer), (OysterBlockEntity)entity, pPos);
                     pLevel.playSound(null, pPos, SoundEvents.DECORATED_POT_PLACE, SoundSource.BLOCKS, 1F, 1F);
+                    open = true;
                 } else {
                     pLevel.playSound(null, pPos, InitSounds.OYSTER_HIT.get(), SoundSource.BLOCKS, 1F, 1F);
                 }
             }
         }
+
+        if (!open) {
+            return InteractionResult.FAIL;
+        }
+
         return InteractionResult.SUCCESS;
     }
 

@@ -67,7 +67,6 @@ public class MechanicalOysterBlock extends BaseEntityBlock implements SimpleWate
         };
     }
 
-
     @Override
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;

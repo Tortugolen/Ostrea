@@ -1,5 +1,16 @@
 {
   "values": [
+    "ostrea:mechanical_oyster",
+    "ostrea:crusher",
+    "ostrea:nacre_block",
+    "ostrea:nacre_slab",
+    "ostrea:nacre_stairs",
+    "ostrea:nacre_bricks",
+    "ostrea:smooth_nacre_block",
+    "ostrea:aragonite_cluster",
+    "ostrea:aragonite_shard",
+    "ostrea:nacre_altar",
+    "ostrea:deepslate_altar",
     "ostrea:round_inscribed_stone",
     "ostrea:tip_inscribed_stone",
     "ostrea:calcium_carbonate_inscribed_stone",

@@ -1,0 +1,21 @@
+{
+  "name": "ostrea:ruined_deepslate_altar_pool/nacre_altar_attempt_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "ostrea:diorite_slab",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      },
+      "weight": 1
+    },
+    {
+      "element": {
+        "element_type": "minecraft:empty_pool_element"
+      },
+      "weight": 3
+    }
+  ]
+}

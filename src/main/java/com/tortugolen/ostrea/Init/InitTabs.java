@@ -38,13 +38,17 @@ public class InitTabs {
                         pOutput.accept(InitItems.ARAGONITE_SHARD_ITEM.get());
                         pOutput.accept(InitItems.ARAGONITE_POWDER.get());
 
+                        pOutput.accept(InitItems.PEARL_RING.get());
                         pOutput.accept(InitItems.PEARL_NECKLACE.get());
+                        pOutput.accept(InitItems.PEARLED_MIRROR.get());
+                        //pOutput.accept(InitItems.RECEPTACLE_PEARL.get());
 
                         pOutput.accept(InitItems.SHELLFISH_KNIFE.get());
+                        pOutput.accept(InitItems.NACREOUS_RESIN.get());
                         pOutput.accept(InitItems.COPPER_NUGGET.get());
                         pOutput.accept(InitItems.IMPURITIES.get());
-                        pOutput.accept(InitItems.PARCHMENT.get());
 
+                        pOutput.accept(InitItems.PARCHMENT.get());
                         pOutput.accept(InitItems.ROUND_MOM.get());
                         pOutput.accept(InitItems.TIP_MOM.get());
                         pOutput.accept(InitItems.CALCIUM_CARBONATE_MOM.get());
@@ -71,17 +75,19 @@ public class InitTabs {
                         pOutput.accept(InitItems.NACRE_STAIRS_ITEM.get());
                         pOutput.accept(InitItems.NACRE_BRICKS_ITEM.get());
                         pOutput.accept(InitItems.SMOOTH_NACRE_BLOCK_ITEM.get());
+                        pOutput.accept(InitItems.NACRE_ALTAR_ITEM.get());
+                        pOutput.accept(InitItems.DEEPSLATE_ALTAR_ITEM.get());
 
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.SHELL_OPENER.get(), 1)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.SELECTIVE_BLESSING.get(), 1)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.REDUCTION.get(), 1)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.REDUCTION.get(), 2)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.REDUCTION.get(), 3)));
-                        //pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 1)));
-                        //pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 2)));
-                        //pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 3)));
-                        //pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 4)));
-                        //pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 5)));
+                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 1)));
+                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 2)));
+                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 3)));
+                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 4)));
+                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 5)));
 
                     })
                     .build());

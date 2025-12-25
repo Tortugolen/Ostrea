@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "ostrea:ruined_deepslate_altar",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 204401,
+    "spacing": 24,
+    "separation": 12
+  }
+}

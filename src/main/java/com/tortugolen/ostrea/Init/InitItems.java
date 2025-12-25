@@ -1,12 +1,10 @@
 package com.tortugolen.ostrea.Init;
 
-import com.tortugolen.ostrea.Items.PearlNecklaceItem;
+import com.tortugolen.ostrea.Items.*;
 import com.tortugolen.ostrea.Items.PearlTips.CopperPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.GoldPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.IronPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.PearlTipItem;
-import com.tortugolen.ostrea.Items.PurityTooltipItem;
-import com.tortugolen.ostrea.Items.TooltipItem;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -34,6 +32,10 @@ public class InitItems {
     public static final RegistryObject<Item> IMPURITIES = ITEMS.register("impurities", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> ARAGONITE_POWDER = ITEMS.register("aragonite_powder", () -> new PurityTooltipItem(new Item.Properties(), "§e50§r"));
     public static final RegistryObject<Item> PEARL_NECKLACE = ITEMS.register("pearl_necklace", () -> new PearlNecklaceItem(new Item.Properties().durability(64)));
+    public static final RegistryObject<Item> PEARL_RING = ITEMS.register("pearl_ring", () -> new PearlRingItem(new Item.Properties().durability(64)));
+    public static final RegistryObject<Item> PEARLED_MIRROR = ITEMS.register("pearled_mirror", () -> new PearledMirrorItem(new Item.Properties().durability(64)));
+    public static final RegistryObject<Item> NACREOUS_RESIN = ITEMS.register("nacreous_resin", () -> new NacreousResinItem(new Item.Properties()));
+    public static final RegistryObject<Item> RECEPTACLE_PEARL = ITEMS.register("receptacle_pearl", () -> new ReceptaclePearlItem(new Item.Properties()));
 
     //MechanicalOysterModifiers
 
@@ -69,4 +71,6 @@ public class InitItems {
     public static final RegistryObject<Item> NACRE_STAIRS_ITEM = ITEMS.register("nacre_stairs", () -> new BlockItem(InitBlocks.NACRE_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<Item> NACRE_BRICKS_ITEM = ITEMS.register("nacre_bricks", () -> new BlockItem(InitBlocks.NACRE_BRICKS.get(), new Item.Properties()));
     public static final RegistryObject<Item> SMOOTH_NACRE_BLOCK_ITEM = ITEMS.register("smooth_nacre_block", () -> new BlockItem(InitBlocks.SMOOTH_NACRE_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> NACRE_ALTAR_ITEM = ITEMS.register("nacre_altar", () -> new BlockItem(InitBlocks.NACRE_ALTAR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> DEEPSLATE_ALTAR_ITEM = ITEMS.register("deepslate_altar", () -> new BlockItem(InitBlocks.DEEPSLATE_ALTAR.get(), new Item.Properties()));
 }

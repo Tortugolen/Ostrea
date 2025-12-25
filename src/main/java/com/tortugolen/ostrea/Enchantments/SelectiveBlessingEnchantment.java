@@ -13,7 +13,7 @@ public class SelectiveBlessingEnchantment extends Enchantment {
 
     @Override
     public boolean canEnchant(ItemStack pStack) {
-        return pStack.is(InitItems.PEARL_NECKLACE.get());
+        return pStack.is(InitItems.PEARL_NECKLACE.get()) || pStack.is(InitItems.PEARL_RING.get()) || pStack.is(InitItems.PEARLED_MIRROR.get());
     }
 
     @Override

@@ -3,9 +3,9 @@
   "effect_clear": {"sounds": ["ostrea:effect_clear"]},
   "oyster_hit": {
     "sounds": [
-      "oyster_hit_1",
-      "oyster_hit_2",
-      "oyster_hit_3"
+      "echo_detectors:oyster_hit_1",
+      "echo_detectors:oyster_hit_2",
+      "echo_detectors:oyster_hit_3"
     ]
   }
 }

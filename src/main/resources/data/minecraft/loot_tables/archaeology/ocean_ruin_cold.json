@@ -51,7 +51,8 @@
         },
         {
           "type": "minecraft:loot_table",
-          "name": "ostrea:archaeology/amom"
+          "name": "ostrea:archaeology/amom",
+          "weight": 2
         }
       ],
       "rolls": 1

@@ -1,0 +1,14 @@
+{
+  "type": "ostrea:add_loot_table",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/buried_treasure"
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.5
+    }
+  ],
+  "loot_table": "ostrea:chests/buried_treasure/mom"
+}

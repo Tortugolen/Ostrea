@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "ostrea:regeneration_statusfer"
+  },
+  "base": {
+    "item": "ostrea:axolotl_helmet"
+  },
+  "result": {
+    "item": "ostrea:improved_axolotl_helmet"
+  },
+  "template": {
+    "item": "ostrea:gem_polishing_smithing_template"
+  }
+}

@@ -12,6 +12,18 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "regeneration_statusfer": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:regeneration_statusfer"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
     }
   },
   "display": {
@@ -32,7 +44,8 @@
   },
   "requirements": [
     [
-      "statusfer"
+      "statusfer",
+      "regeneration_statusfer"
     ]
   ],
   "sends_telemetry_event": true

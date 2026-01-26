@@ -28,8 +28,12 @@
   "item.ostrea.nacreous_resin": "Nacreous Resin",
   "item.ostrea.receptacle_pearl": "Receptacle Pearl",
   "item.ostrea.statusfer": "Statusfer",
+  "item.ostrea.regeneration_statusfer": "Statusfer",
   "item.ostrea.gem_polishing_smithing_template": "Gem Polishing Smithing Template",
   "item.ostrea.nacre_dagger": "Nacre Dagger",
+  "item.ostrea.axolotl_helmet": "Axolotl Helmet",
+  "item.ostrea.improved_axolotl_helmet": "Improved Axolotl Helmet",
+  "item.ostrea.axolotl_membrane": "Axolotl Membrane",
 
   "item.ostrea.round_mom": "Mechanical Oyster Modifier",
   "item.ostrea.round_amom": "Ancient Mechanical Oyster Modifier",
@@ -107,6 +111,10 @@
   "advancements.ostrea.pearl_printer.description": "Craft a Mechanical Oyster",
   "advancements.ostrea.rune_collector.title": "Rune Collector",
   "advancements.ostrea.rune_collector.description": "Obtain all the Mechanical Oyster Modifiers",
+  "advancements.ostrea.axolotl_power.title": "Axolotl Power",
+  "advancements.ostrea.axolotl_power.description": "Obtain an Improved Axolotl Helmet",
+  "advancements.ostrea.relic_collector.title": "Relic Collector",
+  "advancements.ostrea.relic_collector.description": "Obtain all the Relics",
 
   "recipe.ostrea.crush": "Crushing",
   "recipe.ostrea.pearlization": "Pearling",
@@ -117,6 +125,7 @@
 
   "tooltip.ostrea.nacre_dagger_0": "x4 Bonus",
   "tooltip.ostrea.nacre_dagger_1": "When used to fill the",
+  "tooltip.ostrea.improved_axolotl_helmet": "If you have less than 3 hearts, you get",
 
   "mom.tooltip.ostrea.round": "§eRound Form§r",
   "mom.tooltip.ostrea.tip": "§eTip Form§r",

@@ -1,8 +1,8 @@
 {
   "pack": {
     "description": {
-      "text": "${mod_id} resources"
-    },
+        "text": "${mod_name} Resources", "color": "green", "bold": true, "underlined": true
+        },
     "pack_format": 15
   }
 }

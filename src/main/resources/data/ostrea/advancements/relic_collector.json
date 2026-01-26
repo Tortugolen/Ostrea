@@ -1,0 +1,39 @@
+{
+  "parent": "ostrea:statusfer",
+  "criteria": {
+    "improved_axolotl_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:improved_axolotl_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.relic_collector.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:improved_axolotl_helmet"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.relic_collector.title"
+    }
+  },
+  "requirements": [
+    [
+      "improved_axolotl_helmet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

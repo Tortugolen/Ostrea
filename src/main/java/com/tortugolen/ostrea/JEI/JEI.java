@@ -1,5 +1,6 @@
 package com.tortugolen.ostrea.JEI;
 
+import com.tortugolen.ostrea.Init.InitItems;
 import com.tortugolen.ostrea.Ostrea;
 import com.tortugolen.ostrea.Recipes.AbstractCultRecipes;
 import com.tortugolen.ostrea.Recipes.CrushRecipes;
@@ -10,7 +11,9 @@ import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
+import mezz.jei.api.registration.ISubtypeRegistration;
 import net.minecraft.client.Minecraft;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeManager;
 
@@ -39,6 +42,8 @@ public class JEI implements IModPlugin {
         RecipeManager recipeManager = Minecraft.getInstance().level.getRecipeManager();
 
         registration.getIngredientManager().addIngredientsAtRuntime(VanillaTypes.ITEM_STACK, EnchantedBooksJEI.getAllEnchantedBooks());
+        //registration.getIngredientManager().addIngredientsAtRuntime(VanillaTypes.ITEM_STACK, EffectPearls.getAllReceptaclePearlVariants());
+
 
         List<PearlizationRecipes> pearlizationRecipes = recipeManager.getAllRecipesFor(PearlizationRecipes.Type.INSTANCE);
         List<ExtendedPearlizationRecipes> extendedPearlizationRecipes = recipeManager.getAllRecipesFor(ExtendedPearlizationRecipes.Type.INSTANCE);

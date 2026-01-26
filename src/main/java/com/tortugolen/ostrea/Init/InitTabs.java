@@ -1,8 +1,12 @@
 package com.tortugolen.ostrea.Init;
 
+import com.tortugolen.ostrea.Base.EffectStatusfers;
+import com.tortugolen.ostrea.Items.StatusferItem;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
@@ -10,7 +14,7 @@ import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-public class InitTabs {
+public class InitTabs implements EffectStatusfers {
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Ostrea.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> OSTREA = TABS.register("ostrea",
@@ -52,6 +56,9 @@ public class InitTabs {
                         pOutput.accept(InitItems.GEM_POLISHING_SMITHING_TEMPLATE.get());
                         pOutput.accept(InitItems.SHELLFISH_KNIFE.get());
                         pOutput.accept(InitItems.NACRE_DAGGER.get());
+                        pOutput.accept(InitItems.AXOLOTL_MEMBRANE.get());
+                        pOutput.accept(InitItems.AXOLOTL_HELMET.get());
+                        pOutput.accept(InitItems.IMPROVED_AXOLOTL_HELMET.get());
                         pOutput.accept(InitItems.NACREOUS_RESIN.get());
                         pOutput.accept(InitItems.COPPER_NUGGET.get());
                         pOutput.accept(InitItems.IMPURITIES.get());
@@ -87,6 +94,8 @@ public class InitTabs {
                         pOutput.accept(InitItems.NACRE_ALTAR_ITEM.get());
                         pOutput.accept(InitItems.DEEPSLATE_ALTAR_ITEM.get());
                         pOutput.accept(InitItems.CRUSHER_ITEM.get());
+
+                        EffectStatusfers.addRegenerationStatusfer(pOutput, "minecraft:regeneration");
 
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.SHELL_OPENER.get(), 1)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.SELECTIVE_BLESSING.get(), 1)));

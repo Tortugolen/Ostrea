@@ -1,7 +1,6 @@
 package com.tortugolen.ostrea.Items;
 
 import com.tortugolen.ostrea.Init.InitItems;
-import com.tortugolen.ostrea.Init.InitSounds;
 import com.tortugolen.ostrea.Init.InitTriggers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
@@ -9,15 +8,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -43,8 +37,14 @@ public class ReceptaclePearlItem extends Item {
         ENTITY_EFFECTS.put(EntityType.STRAY, MobEffects.MOVEMENT_SLOWDOWN);
         ENTITY_EFFECTS.put(EntityType.DOLPHIN, MobEffects.DOLPHINS_GRACE);
         ENTITY_EFFECTS.put(EntityType.CAVE_SPIDER, MobEffects.POISON);
+        ENTITY_EFFECTS.put(EntityType.PUFFERFISH, MobEffects.POISON);
+        ENTITY_EFFECTS.put(EntityType.BEE, MobEffects.POISON);
         ENTITY_EFFECTS.put(EntityType.AXOLOTL, MobEffects.REGENERATION);
+        ENTITY_EFFECTS.put(EntityType.WARDEN, MobEffects.DARKNESS);
+        //ENTITY_EFFECTS.put(EntityType.TURTLE, MobEffects.DAMAGE_RESISTANCE);
+        //ENTITY_EFFECTS.put(EntityType.TURTLE, MobEffects.MOVEMENT_SLOWDOWN);
     }
+
     public ReceptaclePearlItem(Properties pProperties) {
         super(pProperties);
     }

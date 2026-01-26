@@ -26,6 +26,7 @@ public class Ostrea {
         InitFeatures.FEATURES.register(modEventBus);
         InitPois.POI_TYPES.register(modEventBus);
         InitProfessions.PROFESSIONS.register(modEventBus);
+        InitLootModifiers.LOOT_MODIFIERS.register(modEventBus);
         InitTriggers.register();
     }
 }

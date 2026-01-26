@@ -286,9 +286,44 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
         SimpleContainer container = new SimpleContainer(items.size());
         for (int i = 0; i < items.size(); i++) container.setItem(i, items.get(i));
 
-        Optional<AbstractCultRecipes> optionalRecipe = pLevel.getRecipeManager().getRecipeFor(AbstractCultRecipes.Type.INSTANCE, container, pLevel);
+        Optional<AbstractCultRecipes> optionalRecipe = pLevel.getRecipeManager()
+                .getRecipeFor(AbstractCultRecipes.Type.INSTANCE, container, pLevel);
 
-        return optionalRecipe.isPresent();
+        if (optionalRecipe.isEmpty()) return false;
+
+        AbstractCultRecipes recipe = optionalRecipe.get();
+        if (!recipe.getInputNbt().isEmpty()) {
+            ItemStack centralItem = items.get(0);
+            CompoundTag requiredNbt = recipe.getInputNbt();
+
+            if (!centralItem.hasTag()) return false;
+
+            CompoundTag itemTag = centralItem.getTag();
+            for (String key : requiredNbt.getAllKeys()) {
+                if (!itemTag.contains(key)) return false;
+
+                byte tagType = requiredNbt.getTagType(key);
+
+                switch (tagType) {
+                    case 3:
+                        if (itemTag.getInt(key) != requiredNbt.getInt(key)) return false;
+                        break;
+                    case 8:
+                        if (!itemTag.getString(key).equals(requiredNbt.getString(key))) return false;
+                        break;
+                    case 5:
+                        if (itemTag.getFloat(key) != requiredNbt.getFloat(key)) return false;
+                        break;
+                    case 10:
+                        if (!itemTag.getCompound(key).equals(requiredNbt.getCompound(key))) return false;
+                        break;
+                    default:
+                        if (!itemTag.get(key).equals(requiredNbt.get(key))) return false;
+                }
+            }
+        }
+
+        return true;
     }
 
     private void craftItem(Level pLevel, BlockPos pPos) {
@@ -304,6 +339,11 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
 
         AbstractCultRecipes recipe = optionalRecipe.get();
         ItemStack result = recipe.getResultItem(level.registryAccess()).copy();
+
+        if (!recipe.getResultNbt().isEmpty()) {
+            CompoundTag resultTag = result.getOrCreateTag();
+            resultTag.merge(recipe.getResultNbt());
+        }
 
         ItemStack pStack = getItem().copy();
 
@@ -452,6 +492,17 @@ public class DeepslateAltarBlockEntity extends BlockEntity {
         if (!pTag.contains("effect_amount", CompoundTag.TAG_INT)) return false;
         if (pTag.getInt("effect_amount") != 64) return false;
         if (!pStack.is(InitItems.RECEPTACLE_PEARL.get())) return false;
+
+        return true;
+    }
+
+    private boolean isFullStatusferItem() {
+        ItemStack pStack = getItem();
+        if (!pStack.hasTag()) return false;
+
+        CompoundTag pTag = pStack.getTag();
+        if (!pTag.contains("effect", CompoundTag.TAG_STRING)) return false;
+        if (!pStack.is(InitItems.STATUSFER.get())) return false;
 
         return true;
     }

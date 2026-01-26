@@ -1,0 +1,45 @@
+{
+  "type": "ostrea:abstract_cult",
+  "size": 9,
+  "cult": "abstract",
+  "ingredients": [
+    {
+      "type": "ostrea:nbt_ingredient",
+      "item": "ostrea:receptacle_pearl",
+      "nbt": {
+        "stored_effect": "minecraft:regeneration",
+        "effect_amount": 64
+      }
+    },
+    {
+      "item": "ostrea:gold_pearl"
+    },
+    {
+      "tag": "ostrea:regeneration_property"
+    },
+    {
+      "item": "ostrea:gold_pearl"
+    },
+    {
+      "tag": "ostrea:regeneration_property"
+    },
+    {
+      "item": "ostrea:gold_pearl"
+    },
+    {
+      "tag": "ostrea:regeneration_property"
+    },
+    {
+      "item": "ostrea:gold_pearl"
+    },
+    {
+      "tag": "ostrea:regeneration_property"
+    }
+  ],
+  "result": {
+    "item": "ostrea:regeneration_statusfer",
+    "nbt": {
+      "effect": "minecraft:regeneration"
+    }
+  }
+}

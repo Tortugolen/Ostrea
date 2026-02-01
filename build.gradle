@@ -114,13 +114,13 @@ publishing {
         mavenJava(MavenPublication) {
             from components.java
             groupId = mod_group_id
-            artifactId = ":" + mod_id + "-"
+            artifactId = mod_id
             version = "${minecraft_version}-${mod_version}"
         }
     }
     repositories {
         maven {
-            name = "GitHubPackages"
+            name = "Ostrea"
             url = uri("https://maven.pkg.github.com/Tortugolen/Ostrea")
             credentials {
                 username = localProps['gpr.user'] ?: project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")

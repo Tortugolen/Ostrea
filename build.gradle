@@ -114,7 +114,7 @@ publishing {
         mavenJava(MavenPublication) {
             from components.java
             groupId = mod_group_id
-            artifactId = mod_id
+            artifactId = ":" + mod_id + "-"
             version = "${minecraft_version}-${mod_version}"
         }
     }

@@ -127,6 +127,10 @@ publishing {
                 password = localProps['gpr.key'] ?: project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
             }
         }
+        maven {
+            name = "OstreaLocal"
+            url = uri("file://${project.projectDir}/mcmodsrepo")
+        }
     }
 }
 

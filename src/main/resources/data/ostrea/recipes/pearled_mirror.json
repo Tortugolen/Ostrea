@@ -11,5 +11,6 @@
   },
   "template": {
     "item": "ostrea:gem_polishing_smithing_template"
-  }
+  },
+  "show_notification": true
 }

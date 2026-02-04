@@ -15,5 +15,6 @@
   ],
   "result": {
     "item": "ostrea:crusher"
-  }
+  },
+  "show_notification": true
 }

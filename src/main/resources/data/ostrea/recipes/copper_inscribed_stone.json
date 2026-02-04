@@ -16,5 +16,6 @@
   },
   "result": {
     "item": "ostrea:copper_inscribed_stone"
-  }
+  },
+  "show_notification": true
 }

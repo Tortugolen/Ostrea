@@ -16,5 +16,6 @@
   },
   "result": {
     "item": "ostrea:gold_bracelet"
-  }
+  },
+  "show_notification": true
 }

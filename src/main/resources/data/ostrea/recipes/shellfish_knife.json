@@ -19,5 +19,6 @@
   },
   "result": {
     "item": "ostrea:shellfish_knife"
-  }
+  },
+  "show_notification": true
 }

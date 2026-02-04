@@ -19,5 +19,6 @@
   },
   "result": {
     "item": "ostrea:mechanical_oyster"
-  }
+  },
+  "show_notification": true
 }

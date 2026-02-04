@@ -8,5 +8,6 @@
   "result": {
     "item": "ostrea:aragonite_powder",
     "count": 2
-  }
+  },
+  "show_notification": true
 }

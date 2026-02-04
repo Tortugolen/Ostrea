@@ -16,5 +16,6 @@
   ],
   "result": {
     "item": "ostrea:nacre_altar"
-  }
+  },
+  "show_notification": true
 }

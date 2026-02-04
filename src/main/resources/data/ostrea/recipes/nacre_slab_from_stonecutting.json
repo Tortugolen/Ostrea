@@ -4,5 +4,6 @@
   "ingredient": {
     "item": "ostrea:nacre_block"
   },
-  "result": "ostrea:nacre_slab"
+  "result": "ostrea:nacre_slab",
+  "show_notification": true
 }

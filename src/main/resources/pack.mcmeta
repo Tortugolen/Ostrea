@@ -1,7 +1,7 @@
 {
   "pack": {
     "description": {
-        "text": "${mod_name} Resources", "color": "green", "bold": true, "underlined": true
+        "text": "Ostrea Resources", "color": "green", "bold": true, "underlined": true
         },
     "pack_format": 15
   }

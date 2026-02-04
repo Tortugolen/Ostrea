@@ -16,5 +16,6 @@
   },
   "result": {
     "item": "ostrea:tip_inscribed_stone"
-  }
+  },
+  "show_notification": true
 }

@@ -13,5 +13,6 @@
   },
   "result": {
     "item": "ostrea:gold_ring"
-  }
+  },
+  "show_notification": true
 }

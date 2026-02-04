@@ -16,5 +16,6 @@
   },
   "result": {
     "item": "ostrea:amethyst_mirror"
-  }
+  },
+  "show_notification": true
 }

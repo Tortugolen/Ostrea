@@ -7,5 +7,6 @@
   ],
   "result": {
     "item": "ostrea:aragonite_powder"
-  }
+  },
+  "show_notification": true
 }

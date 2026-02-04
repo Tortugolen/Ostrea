@@ -12,5 +12,6 @@
   ],
   "result": {
     "item": "ostrea:axolotl_helmet"
-  }
+  },
+  "show_notification": true
 }

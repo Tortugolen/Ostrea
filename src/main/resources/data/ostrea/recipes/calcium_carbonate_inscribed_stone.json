@@ -16,5 +16,6 @@
   },
   "result": {
     "item": "ostrea:calcium_carbonate_inscribed_stone"
-  }
+  },
+  "show_notification": true
 }

@@ -15,5 +15,6 @@
   },
   "result": {
     "item": "ostrea:parchment"
-  }
+  },
+  "show_notification": true
 }

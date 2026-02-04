@@ -6,5 +6,6 @@
   "ingredient": {
     "item": "ostrea:nacre_block"
   },
-  "result": "ostrea:smooth_nacre_block"
+  "result": "ostrea:smooth_nacre_block",
+  "show_notification": true
 }

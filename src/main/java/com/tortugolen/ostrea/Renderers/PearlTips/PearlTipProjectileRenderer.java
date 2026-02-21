@@ -11,7 +11,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 
 public class PearlTipProjectileRenderer extends EntityRenderer<PearlTipProjectileEntity> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation("ostrea:textures/entity/pearl_tip.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation("ostrea:textures/entity/projectiles/pearl_tip.png");
     private final PearlTipProjectileModel model;
 
     public PearlTipProjectileRenderer(EntityRendererProvider.Context context) {

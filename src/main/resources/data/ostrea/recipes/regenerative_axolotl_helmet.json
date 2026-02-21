@@ -1,0 +1,15 @@
+{
+  "type": "ostrea:infuse",
+  "ingredients": [
+    {
+      "item": "ostrea:regenerative_soul"
+    },
+    {
+      "item": "ostrea:axolotl_helmet"
+    }
+  ],
+  "effect" : "minecraft:regeneration",
+  "result": {
+    "item": "ostrea:regenerative_axolotl_helmet"
+  }
+}

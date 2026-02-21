@@ -66,7 +66,7 @@ public class PearlBraceletItem extends Item {
     }
 
     @Override
-    public int getEnchantmentValue(ItemStack stack) {
-        return 10;
+    public boolean isEnchantable(ItemStack pStack) {
+        return false;
     }
 }

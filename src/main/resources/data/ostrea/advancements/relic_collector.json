@@ -1,18 +1,19 @@
 {
-  "parent": "ostrea:statusfer",
+  "parent": "ostrea:souls",
   "criteria": {
-    "improved_axolotl_helmet": {
+    "regenerative_axolotl_helmet": {
       "conditions": {
         "items": [
           {
             "items": [
-              "ostrea:improved_axolotl_helmet"
+              "ostrea:regenerative_axolotl_helmet"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     }
+
   },
   "display": {
     "announce_to_chat": true,
@@ -23,7 +24,7 @@
     "frame": "challenge",
     "hidden": false,
     "icon": {
-      "item": "ostrea:improved_axolotl_helmet"
+      "item": "ostrea:regenerative_axolotl_helmet"
     },
     "show_toast": true,
     "title": {
@@ -32,7 +33,7 @@
   },
   "requirements": [
     [
-      "improved_axolotl_helmet"
+      "regenerative_axolotl_helmet"
     ]
   ],
   "sends_telemetry_event": true

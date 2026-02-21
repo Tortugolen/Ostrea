@@ -3,6 +3,7 @@ package com.tortugolen.ostrea.Init;
 import com.tortugolen.ostrea.GUIs.Menus.CrusherMenu;
 import com.tortugolen.ostrea.GUIs.Menus.MechanicalOysterMenu;
 import com.tortugolen.ostrea.GUIs.Menus.OysterMenu;
+import com.tortugolen.ostrea.GUIs.Menus.SoulTableMenu;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
@@ -22,5 +23,6 @@ public class InitMenus {
     public static final RegistryObject<MenuType<OysterMenu>> OYSTER_MENU = registerMenuType("oyster_menu", OysterMenu::new);
     public static final RegistryObject<MenuType<MechanicalOysterMenu>> MECHANICAL_OYSTER_MENU = registerMenuType("mechanical_oyster_menu", MechanicalOysterMenu::new);
     public static final RegistryObject<MenuType<CrusherMenu>> CRUSHER_MENU = registerMenuType("crusher_menu", CrusherMenu::new);
+    public static final RegistryObject<MenuType<SoulTableMenu>> SOUL_TABLE_MENU = registerMenuType("soul_table_menu", SoulTableMenu::new);
 
 }

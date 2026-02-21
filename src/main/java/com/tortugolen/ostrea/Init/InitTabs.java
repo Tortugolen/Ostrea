@@ -26,11 +26,11 @@ public class InitTabs implements EffectStatusfers {
                         pOutput.accept(InitItems.CALCIUM_CARBONATE.get());
                         pOutput.accept(InitItems.NACRE.get());
                         pOutput.accept(InitItems.AMORPHOUS_PEARL.get());
-                        pOutput.accept(InitItems.RECEPTACLE_PEARL.get());
                         pOutput.accept(InitItems.PEARL.get());
                         pOutput.accept(InitItems.IRON_PEARL.get());
                         pOutput.accept(InitItems.COPPER_PEARL.get());
                         pOutput.accept(InitItems.GOLD_PEARL.get());
+                        pOutput.accept(InitItems.RECEPTACLE_PEARL.get());
                         pOutput.accept(InitItems.STATUSFER.get());
                         pOutput.accept(InitItems.PEARL_TIP.get());
                         pOutput.accept(InitItems.IRON_PEARL_TIP.get());
@@ -56,9 +56,12 @@ public class InitTabs implements EffectStatusfers {
                         pOutput.accept(InitItems.GEM_POLISHING_SMITHING_TEMPLATE.get());
                         pOutput.accept(InitItems.SHELLFISH_KNIFE.get());
                         pOutput.accept(InitItems.NACRE_DAGGER.get());
+                        pOutput.accept(InitItems.GOLDEN_HORN.get());
+                        pOutput.accept(InitItems.MOSSY_AXOLOTL_BUCKET.get());
                         pOutput.accept(InitItems.AXOLOTL_MEMBRANE.get());
                         pOutput.accept(InitItems.AXOLOTL_HELMET.get());
-                        pOutput.accept(InitItems.IMPROVED_AXOLOTL_HELMET.get());
+                        pOutput.accept(InitItems.REGENERATIVE_AXOLOTL_HELMET.get());
+                        pOutput.accept(InitItems.REGENERATIVE_SOUL.get());
                         pOutput.accept(InitItems.NACREOUS_RESIN.get());
                         pOutput.accept(InitItems.COPPER_NUGGET.get());
                         pOutput.accept(InitItems.IMPURITIES.get());
@@ -94,6 +97,7 @@ public class InitTabs implements EffectStatusfers {
                         pOutput.accept(InitItems.NACRE_ALTAR_ITEM.get());
                         pOutput.accept(InitItems.DEEPSLATE_ALTAR_ITEM.get());
                         pOutput.accept(InitItems.CRUSHER_ITEM.get());
+                        pOutput.accept(InitItems.SOUL_TABLE_ITEM.get());
 
                         EffectStatusfers.addRegenerationStatusfer(pOutput, "minecraft:regeneration");
 
@@ -108,6 +112,8 @@ public class InitTabs implements EffectStatusfers {
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 4)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 5)));
 
+                        pOutput.accept(InitItems.MOSSY_AXOLOTL_SPAWN_EGG.get());
+                        pOutput.accept(InitItems.ANCESTRAL_AXOLOTL_SPAWN_EGG.get());
                     })
                     .build());
 }

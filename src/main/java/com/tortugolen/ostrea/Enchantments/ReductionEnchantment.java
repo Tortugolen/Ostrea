@@ -18,7 +18,7 @@ public class ReductionEnchantment extends Enchantment {
 
     @Override
     public boolean canApplyAtEnchantingTable(ItemStack pStack) {
-        return true;
+        return false;
     }
 
     @Override

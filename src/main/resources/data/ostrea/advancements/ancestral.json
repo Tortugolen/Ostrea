@@ -1,0 +1,41 @@
+{
+  "parent": "ostrea:golden_horn",
+  "criteria": {
+    "axolotl": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "ostrea:ancestral_axolotl"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.ancestral.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.ancestral.title"
+    }
+  },
+  "requirements": [
+    [
+      "axolotl"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

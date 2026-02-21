@@ -1,0 +1,16 @@
+{
+  "type": "ostrea:add_enchanted_book_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/stronghold_library"
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.1
+    }
+  ],
+  "enchantment": "ostrea:selective_blessing",
+  "min_level": 1,
+  "max_level": 1
+}

@@ -6,11 +6,13 @@ import com.tortugolen.ostrea.Items.PearlTips.GoldPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.IronPearlTipItem;
 import com.tortugolen.ostrea.Items.PearlTips.PearlTipItem;
 import com.tortugolen.ostrea.Ostrea;
+import com.tortugolen.ostrea.Tiers.DefaultTier;
 import com.tortugolen.ostrea.Tiers.NacreTier;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -23,7 +25,7 @@ public class InitItems {
     public static final RegistryObject<Item> IRON_PEARL = ITEMS.register("iron_pearl", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> COPPER_PEARL = ITEMS.register("copper_pearl", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GOLD_PEARL = ITEMS.register("gold_pearl", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> CALCIUM_CARBONATE = ITEMS.register("calcium_carbonate", () -> new PurityTooltipItem(new Item.Properties(), "§e100§r"));
+    public static final RegistryObject<Item> CALCIUM_CARBONATE = ITEMS.register("calcium_carbonate", () -> new PurityTooltipItem(new Item.Properties(), "§e50§r"));
     public static final RegistryObject<Item> PEARL_TIP = ITEMS.register("pearl_tip", () -> new PearlTipItem(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> IRON_PEARL_TIP = ITEMS.register("iron_pearl_tip", () -> new IronPearlTipItem(new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> COPPER_PEARL_TIP = ITEMS.register("copper_pearl_tip", () -> new CopperPearlTipItem(new Item.Properties().stacksTo(16)));
@@ -33,7 +35,7 @@ public class InitItems {
     public static final RegistryObject<Item> AMORPHOUS_PEARL = ITEMS.register("amorphous_pearl", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PARCHMENT = ITEMS.register("parchment", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> IMPURITIES = ITEMS.register("impurities", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ARAGONITE_POWDER = ITEMS.register("aragonite_powder", () -> new PurityTooltipItem(new Item.Properties(), "§e50§r"));
+    public static final RegistryObject<Item> ARAGONITE_POWDER = ITEMS.register("aragonite_powder", () -> new PurityTooltipItem(new Item.Properties(), "§e25§r"));
     public static final RegistryObject<Item> PEARL_NECKLACE = ITEMS.register("pearl_necklace", () -> new PearlNecklaceItem(new Item.Properties().durability(64)));
     public static final RegistryObject<Item> PEARL_RING = ITEMS.register("pearl_ring", () -> new PearlRingItem(new Item.Properties().durability(64)));
     public static final RegistryObject<Item> PEARLED_MIRROR = ITEMS.register("pearled_mirror", () -> new PearledMirrorItem(new Item.Properties().durability(64)));
@@ -48,7 +50,10 @@ public class InitItems {
     public static final RegistryObject<Item> NACRE_DAGGER = ITEMS.register("nacre_dagger", () -> new NacreDaggerItem(new NacreTier(), 2, -2F, new Item.Properties()));
     public static final RegistryObject<Item> AXOLOTL_MEMBRANE = ITEMS.register("axolotl_membrane", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> AXOLOTL_HELMET = ITEMS.register("axolotl_helmet", () -> new AxolotlHelmetItem(InitArmorMaterials.AXOLOTL, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> IMPROVED_AXOLOTL_HELMET = ITEMS.register("improved_axolotl_helmet", () -> new ImprovedAxolotlHelmetItem(InitArmorMaterials.AXOLOTL, ArmorItem.Type.HELMET, new Item.Properties().rarity(InitRarities.RELIC)));
+    public static final RegistryObject<Item> REGENERATIVE_AXOLOTL_HELMET = ITEMS.register("regenerative_axolotl_helmet", () -> new RegenerativeAxolotlHelmetItem(InitArmorMaterials.AXOLOTL, ArmorItem.Type.HELMET, new Item.Properties().rarity(InitRarities.RELIC)));
+    public static final RegistryObject<Item> MOSSY_AXOLOTL_BUCKET = ITEMS.register("mossy_axolotl_bucket", () -> new MobBucketItem(InitEntities.MOSSY_AXOLOTL, () -> Fluids.WATER, () -> SoundEvents.BUCKET_EMPTY_AXOLOTL, new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> GOLDEN_HORN = ITEMS.register("golden_horn", () -> new GoldenHornItem(new Item.Properties().stacksTo(1), new ResourceLocation("minecraft", "seek_goat_horn")));
+    public static final RegistryObject<Item> REGENERATIVE_SOUL = ITEMS.register("regenerative_soul", () -> new FoilItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
 
     //MechanicalOysterModifiers
 
@@ -68,7 +73,7 @@ public class InitItems {
 
     //Statusfers
 
-    public static final RegistryObject<Item> STATUSFER = ITEMS.register("statusfer", () -> new StatusferItem(new Item.Properties().durability(64).rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> STATUSFER = ITEMS.register("statusfer", () -> new StatusferItem(new Item.Properties().stacksTo(16).rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> REGENERATION_STATUSFER = ITEMS.register("regeneration_statusfer", () -> new EffectStatusferItem(new Item.Properties().durability(64).rarity(Rarity.UNCOMMON)));
 
     //BlockItems
@@ -91,4 +96,10 @@ public class InitItems {
     public static final RegistryObject<Item> SMOOTH_NACRE_BLOCK_ITEM = ITEMS.register("smooth_nacre_block", () -> new BlockItem(InitBlocks.SMOOTH_NACRE_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> NACRE_ALTAR_ITEM = ITEMS.register("nacre_altar", () -> new BlockItem(InitBlocks.NACRE_ALTAR.get(), new Item.Properties()));
     public static final RegistryObject<Item> DEEPSLATE_ALTAR_ITEM = ITEMS.register("deepslate_altar", () -> new BlockItem(InitBlocks.DEEPSLATE_ALTAR.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SOUL_TABLE_ITEM = ITEMS.register("soul_table", () -> new BlockItem(InitBlocks.SOUL_TABLE.get(), new Item.Properties()));
+
+    //Spawn Eggs
+
+    public static final RegistryObject<Item> MOSSY_AXOLOTL_SPAWN_EGG = ITEMS.register("mossy_axolotl_spawn_egg", () -> new ForgeSpawnEggItem(InitEntities.MOSSY_AXOLOTL, 16499171, 0x50692C, new Item.Properties()));
+    public static final RegistryObject<Item> ANCESTRAL_AXOLOTL_SPAWN_EGG = ITEMS.register("ancestral_axolotl_spawn_egg", () -> new ForgeSpawnEggItem(InitEntities.ANCESTRAL_AXOLOTL, 16499171, 0x539882, new Item.Properties()));
 }

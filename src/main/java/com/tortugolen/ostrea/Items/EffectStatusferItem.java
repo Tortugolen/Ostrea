@@ -44,8 +44,8 @@ public class EffectStatusferItem extends StatusferItem {
             pStack.hurtAndBreak(16, pPlayer, player -> {
                 player.broadcastBreakEvent(pUsedHand);
 
-                if (!player.getInventory().add(InitItems.RECEPTACLE_PEARL.get().getDefaultInstance())) {
-                    player.drop(InitItems.RECEPTACLE_PEARL.get().getDefaultInstance(), false);
+                if (!player.getInventory().add(InitItems.STATUSFER.get().getDefaultInstance())) {
+                    player.drop(InitItems.STATUSFER.get().getDefaultInstance(), false);
                 }
             });
         }

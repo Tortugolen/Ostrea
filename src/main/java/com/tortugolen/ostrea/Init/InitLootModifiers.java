@@ -1,6 +1,7 @@
 package com.tortugolen.ostrea.Init;
 
 import com.mojang.serialization.Codec;
+import com.tortugolen.ostrea.LootModifiers.AddEnchantedBookItemModifier;
 import com.tortugolen.ostrea.LootModifiers.AddItemModifier;
 import com.tortugolen.ostrea.LootModifiers.AddLootTableModifier;
 import com.tortugolen.ostrea.Ostrea;
@@ -13,5 +14,6 @@ public class InitLootModifiers {
     public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_MODIFIERS = DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, Ostrea.MOD_ID);
 
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_ITEM = LOOT_MODIFIERS.register("add_item", AddItemModifier.CODEC);
+    public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_ENCHANTED_BOOK_ITEM = LOOT_MODIFIERS.register("add_enchanted_book_item", AddEnchantedBookItemModifier.CODEC);
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_LOOT_TABLE = LOOT_MODIFIERS.register("add_loot_table", AddLootTableModifier.CODEC);
 }

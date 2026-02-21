@@ -1,5 +1,5 @@
 {
-  "parent": "ostrea:pearl_printer",
+  "parent": "ostrea:inscribed_block",
   "criteria": {
     "round_amom": {
       "conditions": {

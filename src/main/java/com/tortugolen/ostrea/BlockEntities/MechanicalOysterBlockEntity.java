@@ -45,8 +45,8 @@ public class MechanicalOysterBlockEntity extends BlockEntity implements MenuProv
         CALCIUM_CARBONATE_ITEMS.put(InitItems.ARAGONITE_POWDER.get(), 1);
     }
     static {
-        PURITY.put(InitItems.CALCIUM_CARBONATE.get(), 100);
-        PURITY.put(InitItems.ARAGONITE_POWDER.get(), 50);
+        PURITY.put(InitItems.CALCIUM_CARBONATE.get(), 50);
+        PURITY.put(InitItems.ARAGONITE_POWDER.get(), 25);
     }
     static {
         IMPURITY_COUNT.put(InitItems.CALCIUM_CARBONATE.get(), 0);

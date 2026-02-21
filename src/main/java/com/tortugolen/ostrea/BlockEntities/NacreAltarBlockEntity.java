@@ -101,4 +101,5 @@ public class NacreAltarBlockEntity extends BlockEntity {
     @Override
     public CompoundTag getUpdateTag() {
         return saveWithoutMetadata();
-    }}
+    }
+}

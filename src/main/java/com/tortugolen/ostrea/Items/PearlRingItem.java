@@ -62,34 +62,7 @@ public class PearlRingItem extends Item {
     }
 
     @Override
-    public int getEnchantmentValue(ItemStack stack) {
-        return 10;
+    public boolean isEnchantable(ItemStack pStack) {
+        return false;
     }
-
-    /*@Override
-    public void curioTick(SlotContext pContext, ItemStack pStack) {
-        LivingEntity pEntity = pContext.entity();
-
-        Map<Enchantment, Integer> enchantments = pStack.getAllEnchantments();
-
-        MobEffectInstance pearlificationEffect = pEntity.getEffect(InitMobEffects.PEARLIFICATION.get());
-
-        boolean hasSelectiveBlessing = enchantments.containsKey(InitEnchantments.SELECTIVE_BLESSING.get());
-        boolean hasPearlification = pearlificationEffect != null;
-
-        if (!hasPearlification) {
-            if (!hasSelectiveBlessing) {
-                pEntity.addEffect(new MobEffectInstance(InitMobEffects.PEARLIFICATION.get(), 1200, 0));
-
-            } else {
-                pEntity.addEffect(new MobEffectInstance(InitMobEffects.PEARLIFICATION.get(), 1200, 1));
-            }
-
-            if (!(pEntity instanceof Player pPlayer)) return;
-
-            if (!pPlayer.isCreative()) {
-                pStack.hurtAndBreak(4, pPlayer, player -> {});
-            }
-        }
-    }*/
 }

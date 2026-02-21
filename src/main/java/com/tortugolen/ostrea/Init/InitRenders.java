@@ -1,20 +1,20 @@
 package com.tortugolen.ostrea.Init;
 
 import com.tortugolen.ostrea.Base.NBTIngredient;
+import com.tortugolen.ostrea.GUIs.Screens.SoulTableScreen;
+import com.tortugolen.ostrea.Models.AncestralAxolotlModel;
 import com.tortugolen.ostrea.Models.AxolotlHelmetModel;
 import com.tortugolen.ostrea.GUIs.Screens.CrusherScreen;
 import com.tortugolen.ostrea.GUIs.Screens.MechanicalOysterScreen;
 import com.tortugolen.ostrea.GUIs.Screens.OysterScreen;
 import com.tortugolen.ostrea.Models.ImprovedAxolotlHelmetModel;
+import com.tortugolen.ostrea.Models.MossyAxolotlModel;
 import com.tortugolen.ostrea.Models.PearlTips.CopperPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.GoldPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.IronPearlTipProjectileModel;
 import com.tortugolen.ostrea.Models.PearlTips.PearlTipProjectileModel;
 import com.tortugolen.ostrea.Ostrea;
-import com.tortugolen.ostrea.Renderers.AxolotlHelmetRenderer;
-import com.tortugolen.ostrea.Renderers.DeepslateAltarRenderer;
-import com.tortugolen.ostrea.Renderers.ImprovedAxolotlHelmetRenderer;
-import com.tortugolen.ostrea.Renderers.NacreAltarRenderer;
+import com.tortugolen.ostrea.Renderers.*;
 import com.tortugolen.ostrea.Renderers.PearlTips.CopperPearlTipProjectileRenderer;
 import com.tortugolen.ostrea.Renderers.PearlTips.GoldPearlTipProjectileRenderer;
 import com.tortugolen.ostrea.Renderers.PearlTips.IronPearlTipProjectileRenderer;
@@ -42,6 +42,10 @@ public class InitRenders {
         event.registerEntityRenderer(InitEntities.COPPER_PEARL_TIP.get(), CopperPearlTipProjectileRenderer::new);
         event.registerEntityRenderer(InitEntities.GOLD_PEARL_TIP.get(), GoldPearlTipProjectileRenderer::new);
 
+        event.registerEntityRenderer(InitEntities.MOSSY_AXOLOTL.get(), MossyAxolotlRenderer::new);
+        event.registerEntityRenderer(InitEntities.ANCESTRAL_AXOLOTL.get(), AncestralAxolotlRenderer::new);
+
+        event.registerBlockEntityRenderer(InitBlockEntities.SOUL_TABLE_BE.get(), SoulTableRenderer::new);
         event.registerBlockEntityRenderer(InitBlockEntities.NACRE_ALTAR_BE.get(), NacreAltarRenderer::new);
         event.registerBlockEntityRenderer(InitBlockEntities.DEEPSLATE_ALTAR_BE.get(), DeepslateAltarRenderer::new);
     }
@@ -55,6 +59,7 @@ public class InitRenders {
         MenuScreens.register(InitMenus.OYSTER_MENU.get(), OysterScreen::new);
         MenuScreens.register(InitMenus.MECHANICAL_OYSTER_MENU.get(), MechanicalOysterScreen::new);
         MenuScreens.register(InitMenus.CRUSHER_MENU.get(), CrusherScreen::new);
+        MenuScreens.register(InitMenus.SOUL_TABLE_MENU.get(), SoulTableScreen::new);
 
         event.enqueueWork(() -> {
             CraftingHelper.register(new ResourceLocation(Ostrea.MOD_ID, "nbt_ingredient"), NBTIngredient.Serializer.INSTANCE);
@@ -67,6 +72,9 @@ public class InitRenders {
         event.registerLayerDefinition(IronPearlTipProjectileModel.LAYER_LOCATION, IronPearlTipProjectileModel::createBodyLayer);
         event.registerLayerDefinition(CopperPearlTipProjectileModel.LAYER_LOCATION, CopperPearlTipProjectileModel::createBodyLayer);
         event.registerLayerDefinition(GoldPearlTipProjectileModel.LAYER_LOCATION, GoldPearlTipProjectileModel::createBodyLayer);
+
+        event.registerLayerDefinition(InitLayers.MOSSY_AXOLOTL_LAYER, MossyAxolotlModel::createBodyLayer);
+        event.registerLayerDefinition(InitLayers.ANCESTRAL_AXOLOTL_LAYER, AncestralAxolotlModel::createBodyLayer);
 
         event.registerLayerDefinition(AxolotlHelmetModel.LAYER_LOCATION, AxolotlHelmetModel::createBodyLayer);
         event.registerLayerDefinition(ImprovedAxolotlHelmetModel.LAYER_LOCATION, ImprovedAxolotlHelmetModel::createBodyLayer);

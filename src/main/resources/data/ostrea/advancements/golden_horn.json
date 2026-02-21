@@ -1,0 +1,39 @@
+{
+  "parent": "ostrea:root",
+  "criteria": {
+    "golden_horn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:golden_horn"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.golden_horn.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:golden_horn"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.golden_horn.title"
+    }
+  },
+  "requirements": [
+    [
+      "golden_horn"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

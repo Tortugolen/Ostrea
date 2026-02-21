@@ -1,5 +1,5 @@
 {
-  "parent": "ostrea:pearl",
+  "parent": "ostrea:inscribed_block",
   "criteria": {
     "iron_pearl": {
       "trigger": "minecraft:inventory_changed",

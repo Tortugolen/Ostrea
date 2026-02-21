@@ -1,8 +1,11 @@
 package com.tortugolen.ostrea.Blocks;
 
 import com.tortugolen.ostrea.Init.InitItems;
+import com.tortugolen.ostrea.Init.InitTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -77,6 +80,9 @@ public class InscribedBlock extends Block {
                         Item glyphItem = ForgeRegistries.ITEMS.getValue(new ResourceLocation("ostrea:" + glyph + "_mom"));
                         if (glyphItem != null) {
                             pPlayer.addItem(new ItemStack(glyphItem));
+                        }
+                        if (pPlayer instanceof ServerPlayer pServerPlayer) {
+                            InitTriggers.ABSTRACT6.trigger(pServerPlayer);
                         }
                         return InteractionResult.SUCCESS;
                         }

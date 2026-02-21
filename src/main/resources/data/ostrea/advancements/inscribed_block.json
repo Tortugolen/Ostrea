@@ -1,0 +1,30 @@
+{
+  "parent": "ostrea:mechanical_oyster",
+  "criteria": {
+    "condition": {
+      "trigger": "ostrea:abstract6"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.inscribed_block.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:round_mom"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.inscribed_block.title"
+    }
+  },
+  "requirements": [
+    [
+      "condition"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

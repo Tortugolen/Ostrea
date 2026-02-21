@@ -1,0 +1,39 @@
+{
+  "parent": "ostrea:ancestral",
+  "criteria": {
+    "regenerative_soul": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:regenerative_soul"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.souls.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:regenerative_soul"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.souls.title"
+    }
+  },
+  "requirements": [
+    [
+      "regenerative_soul"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

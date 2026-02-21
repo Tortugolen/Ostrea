@@ -16,6 +16,8 @@ public class InitBlockEntities {
             "mechanical_oyster_be", () -> BlockEntityType.Builder.of(MechanicalOysterBlockEntity::new, InitBlocks.MECHANICAL_OYSTER.get()).build(null));
     public static final RegistryObject<BlockEntityType<CrusherBlockEntity>> CRUSHER_BE = BLOCK_ENTITIES.register(
             "crusher_be", () -> BlockEntityType.Builder.of(CrusherBlockEntity::new, InitBlocks.CRUSHER.get()).build(null));
+    public static final RegistryObject<BlockEntityType<SoulTableBlockEntity>> SOUL_TABLE_BE = BLOCK_ENTITIES.register(
+            "soul_table_be", () -> BlockEntityType.Builder.of(SoulTableBlockEntity::new, InitBlocks.SOUL_TABLE.get()).build(null));
     public static final RegistryObject<BlockEntityType<NacreAltarBlockEntity>> NACRE_ALTAR_BE = BLOCK_ENTITIES.register(
             "nacre_altar_be", () -> BlockEntityType.Builder.of(NacreAltarBlockEntity::new, InitBlocks.NACRE_ALTAR.get()).build(null));
     public static final RegistryObject<BlockEntityType<DeepslateAltarBlockEntity>> DEEPSLATE_ALTAR_BE = BLOCK_ENTITIES.register(

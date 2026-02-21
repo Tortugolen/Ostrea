@@ -1,5 +1,5 @@
 {
-  "parent": "ostrea:receptacle_pearl",
+  "parent": "ostrea:mechanical_oyster",
   "criteria": {
     "condition": {
       "trigger": "ostrea:abstract3"
@@ -14,7 +14,7 @@
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "ostrea:nacre_dagger"
+      "item": "ostrea:receptacle_pearl"
     },
     "show_toast": true,
     "title": {

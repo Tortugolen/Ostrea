@@ -12,7 +12,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 
 public class CopperPearlTipProjectileRenderer extends EntityRenderer<CopperPearlTipProjectileEntity> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation("ostrea:textures/entity/copper_pearl_tip.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation("ostrea:textures/entity/projectiles/copper_pearl_tip.png");
     private final CopperPearlTipProjectileModel model;
 
     public CopperPearlTipProjectileRenderer(EntityRendererProvider.Context context) {

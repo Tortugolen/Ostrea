@@ -2,7 +2,7 @@ package com.tortugolen.ostrea.Renderers;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.tortugolen.ostrea.Items.ImprovedAxolotlHelmetItem;
+import com.tortugolen.ostrea.Items.RegenerativeAxolotlHelmetItem;
 import com.tortugolen.ostrea.Models.ImprovedAxolotlHelmetModel;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.client.Minecraft;
@@ -30,7 +30,7 @@ public class ImprovedAxolotlHelmetRenderer extends RenderLayer<Player, HumanoidM
     public void render(PoseStack pPose, MultiBufferSource pBuffer, int light, Player pPlayer, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         ItemStack pStack = pPlayer.getItemBySlot(EquipmentSlot.HEAD);
 
-        if (!(pStack.getItem() instanceof ImprovedAxolotlHelmetItem)) return;
+        if (!(pStack.getItem() instanceof RegenerativeAxolotlHelmetItem)) return;
 
         pPose.pushPose();
 

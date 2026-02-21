@@ -1,0 +1,39 @@
+{
+  "parent": "ostrea:root",
+  "criteria": {
+    "mechanical_oyster": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ostrea:mechanical_oyster"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "ostrea:textures/gui/advancements/backgrounds/nacre_block.png",
+    "description": {
+      "translate": "advancements.ostrea.mechanical_oyster.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "ostrea:mechanical_oyster"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.ostrea.mechanical_oyster.title"
+    }
+  },
+  "requirements": [
+    [
+      "mechanical_oyster"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

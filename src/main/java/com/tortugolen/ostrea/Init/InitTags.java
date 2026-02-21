@@ -13,5 +13,6 @@ public class InitTags {
         }
 
         public static final TagKey<Item> OYSTER_OPENER = ItemTag("oyster_opener");
+        public static final TagKey<Item> EFFECT_STATUSFERS = ItemTag("effect_statusfers");
     }
 }

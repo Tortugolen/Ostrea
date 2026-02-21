@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:emerald"
+    },
+    "I": {
+      "item": "ostrea:statusfer"
+    },
+    "X": {
+      "item": "minecraft:polished_deepslate"
+    }
+  },
+  "pattern": [
+    " I ",
+    "#X#",
+    "XXX"
+  ],
+  "result": {
+    "item": "ostrea:soul_table"
+  },
+  "show_notification": true
+}

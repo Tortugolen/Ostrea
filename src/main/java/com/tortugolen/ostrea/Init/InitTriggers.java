@@ -13,6 +13,7 @@ public class InitTriggers {
     public static final AbstractTrigger3 ABSTRACT3 = new AbstractTrigger3();
     public static final AbstractTrigger4 ABSTRACT4 = new AbstractTrigger4();
     public static final AbstractTrigger5 ABSTRACT5 = new AbstractTrigger5();
+    public static final AbstractTrigger6 ABSTRACT6 = new AbstractTrigger6();
     public static final EnchantedItemTrigger ENCHANTED_ITEM = new EnchantedItemTrigger();
     public static final EffectRemovedTrigger EFFECT_REMOVED = new EffectRemovedTrigger();
     public static final ItemUsedOnBlockTrigger ITEM_USED_ON_BLOCK = new ItemUsedOnBlockTrigger();
@@ -24,6 +25,7 @@ public class InitTriggers {
         CriteriaTriggers.register(ABSTRACT3);
         CriteriaTriggers.register(ABSTRACT4);
         CriteriaTriggers.register(ABSTRACT5);
+        CriteriaTriggers.register(ABSTRACT6);
         CriteriaTriggers.register(ENCHANTED_ITEM);
         CriteriaTriggers.register(EFFECT_REMOVED);
         CriteriaTriggers.register(ITEM_USED_ON_BLOCK);

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "ostrea:item/improved_axolotl_helmet"
-  }
-}

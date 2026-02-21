@@ -1,10 +1,7 @@
 package com.tortugolen.ostrea.Init;
 
 import com.tortugolen.ostrea.Ostrea;
-import com.tortugolen.ostrea.Recipes.AbstractCultRecipes;
-import com.tortugolen.ostrea.Recipes.CrushRecipes;
-import com.tortugolen.ostrea.Recipes.ExtendedPearlizationRecipes;
-import com.tortugolen.ostrea.Recipes.PearlizationRecipes;
+import com.tortugolen.ostrea.Recipes.*;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,6 +16,8 @@ public class InitRecipes {
             "extended_pearlization", () -> ExtendedPearlizationRecipes.Serializer.INSTANCE);
     public static final RegistryObject<RecipeSerializer<CrushRecipes>> CRUSH = SERIALIZERS.register(
             "crush", () -> CrushRecipes.Serializer.INSTANCE);
+    public static final RegistryObject<RecipeSerializer<InfuseRecipes>> INFUSE = SERIALIZERS.register(
+            "infuse", () -> InfuseRecipes.Serializer.INSTANCE);
 
     //Cults
 

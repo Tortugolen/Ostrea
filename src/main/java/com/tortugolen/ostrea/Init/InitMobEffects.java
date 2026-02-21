@@ -1,5 +1,6 @@
 package com.tortugolen.ostrea.Init;
 
+import com.tortugolen.ostrea.MobEffects.AbyssmusRageMobEffect;
 import com.tortugolen.ostrea.MobEffects.PearlificationMobEffect;
 import com.tortugolen.ostrea.Ostrea;
 import net.minecraft.world.effect.MobEffect;
@@ -12,4 +13,5 @@ public class InitMobEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, Ostrea.MOD_ID);
 
     public static final RegistryObject<MobEffect> PEARLIFICATION = MOB_EFFECTS.register("pearlification", () -> new PearlificationMobEffect(MobEffectCategory.BENEFICIAL, 0xFFFFE6));
+    public static final RegistryObject<MobEffect> ABYSSMUS_RAGE = MOB_EFFECTS.register("abyssmus_rage", () -> new AbyssmusRageMobEffect(MobEffectCategory.NEUTRAL, 0x2180A1));
 }

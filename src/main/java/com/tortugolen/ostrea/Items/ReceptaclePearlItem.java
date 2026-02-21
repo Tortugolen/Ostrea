@@ -40,6 +40,8 @@ public class ReceptaclePearlItem extends Item {
         ENTITY_EFFECTS.put(EntityType.PUFFERFISH, MobEffects.POISON);
         ENTITY_EFFECTS.put(EntityType.BEE, MobEffects.POISON);
         ENTITY_EFFECTS.put(EntityType.AXOLOTL, MobEffects.REGENERATION);
+//        ENTITY_EFFECTS.put(InitEntities.MOSSY_AXOLOTL.get(), MobEffects.REGENERATION);
+//        ENTITY_EFFECTS.put(InitEntities.ANCESTRAL_AXOLOTL.get(), MobEffects.REGENERATION);
         ENTITY_EFFECTS.put(EntityType.WARDEN, MobEffects.DARKNESS);
         //ENTITY_EFFECTS.put(EntityType.TURTLE, MobEffects.DAMAGE_RESISTANCE);
         //ENTITY_EFFECTS.put(EntityType.TURTLE, MobEffects.MOVEMENT_SLOWDOWN);

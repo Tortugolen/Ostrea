@@ -17,11 +17,6 @@ public class SelectiveBlessingEnchantment extends Enchantment {
     }
 
     @Override
-    public boolean canApplyAtEnchantingTable(ItemStack pStack) {
-        return false;
-    }
-
-    @Override
     public boolean isTreasureOnly() {
         return true;
     }

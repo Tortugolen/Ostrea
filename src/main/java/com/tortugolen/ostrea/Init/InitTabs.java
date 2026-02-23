@@ -106,11 +106,6 @@ public class InitTabs implements EffectStatusfers {
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.REDUCTION.get(), 1)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.REDUCTION.get(), 2)));
                         pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.REDUCTION.get(), 3)));
-                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 1)));
-                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 2)));
-                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 3)));
-                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 4)));
-                        pOutput.accept(EnchantedBookItem.createForEnchantment(new EnchantmentInstance(InitEnchantments.PASSIVE_ANNULMENT.get(), 5)));
 
                         pOutput.accept(InitItems.MOSSY_AXOLOTL_SPAWN_EGG.get());
                         pOutput.accept(InitItems.ANCESTRAL_AXOLOTL_SPAWN_EGG.get());

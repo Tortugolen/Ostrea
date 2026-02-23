@@ -24,6 +24,7 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'mixin.env.disableRefMap', 'true'
             mods {
                 "${mod_id}" {
                     source sourceSets.main
@@ -51,11 +52,12 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
-        name = "Jared's maven"
-        url = "https://maven.blamejared.com/"
+        name = "Curios"
+        url = "https://maven.theillusivec4.top/"
     }
     maven {
-        url "https://maven.saps.dev/minecraft"
+        name = "JEI"
+        url = "https://modmaven.dev/"
     }
 }
 
@@ -65,6 +67,9 @@ dependencies {
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"))
     compileOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}"))
     runtimeOnly(fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}"))
+
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}+${minecraft_version}:api")
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}+${minecraft_version}")
 }
 
 tasks.named('processResources', ProcessResources).configure {
@@ -75,6 +80,7 @@ tasks.named('processResources', ProcessResources).configure {
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
             jei_version: jei_version, jei_version_range: jei_version_range,
+            curios_version: curios_version
     ]
     inputs.properties replaceProperties
 

@@ -30,3 +30,10 @@ mandatory=false
 versionRange="${jei_version_range}"
 ordering="NONE"
 side="CLIENT"
+
+[[dependencies.ostrea]]
+modId="curios"
+mandatory=false
+versionRange="${curios_version}"
+ordering="NONE"
+side="BOTH"

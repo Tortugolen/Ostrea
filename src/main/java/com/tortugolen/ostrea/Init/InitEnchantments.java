@@ -1,6 +1,5 @@
 package com.tortugolen.ostrea.Init;
 
-import com.tortugolen.ostrea.Enchantments.PassiveAnnulmentEnchantment;
 import com.tortugolen.ostrea.Enchantments.ReductionEnchantment;
 import com.tortugolen.ostrea.Enchantments.SelectiveBlessingEnchantment;
 import com.tortugolen.ostrea.Enchantments.ShellOpenerEnchantment;
@@ -22,5 +21,4 @@ public class InitEnchantments {
     public static RegistryObject<Enchantment> SHELL_OPENER = ENCHANTMENTS.register("shell_opener", () -> new ShellOpenerEnchantment(Enchantment.Rarity.RARE, SHELL_OPENER_CATEGORY, EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND));
     public static RegistryObject<Enchantment> SELECTIVE_BLESSING = ENCHANTMENTS.register("selective_blessing", () -> new SelectiveBlessingEnchantment(Enchantment.Rarity.VERY_RARE, PEARL_JEWEL_CATEGORY, EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND, EquipmentSlot.HEAD, EquipmentSlot.CHEST));
     public static RegistryObject<Enchantment> REDUCTION = ENCHANTMENTS.register("reduction", () -> new ReductionEnchantment(Enchantment.Rarity.RARE, PEARL_NECKLACE_CATEGORY, EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND, EquipmentSlot.HEAD, EquipmentSlot.CHEST));
-    public static RegistryObject<Enchantment> PASSIVE_ANNULMENT = ENCHANTMENTS.register("passive_annulment", () -> new PassiveAnnulmentEnchantment(Enchantment.Rarity.RARE, PEARL_NECKLACE_CATEGORY, EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND, EquipmentSlot.HEAD, EquipmentSlot.CHEST));
 }
